@@ -1,11 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is my homepage</h1>
-</body>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WDD 231 - Course Home Page - Jesus Armando Ramos Ontiveros</title>
+		<meta name="description" content="Course home page for Web and Computer Programming Certificate">
+		<meta name="author" content="Jesus Armando Ramos Ontiveros">
+		<meta property="og:title" content="WDD 231 - Course Home Page - Jesus Armando Ramos Ontiveros">
+		<meta property="og:description" content="Course home page for Web and Computer Programming Certificate">
+		<meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/images/sinaloa.webp">
+		<meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/">
+		<link rel="icon" href="/images/favicon.ico">
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" as="style">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css">
+		<script src="scripts/courses.js" defer></script>
+		<script src="scripts/script.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<img src="images/profile.webp" alt="Profile Photo" class="profile-photo" width="80" height="80">
+			<span class="name">Jesus Armando Ramos Ontiveros</span>
+			<button id="hamburgerBtn">☰</button>
+		</header>
+		<nav>
+			<ul id="primaryNav">
+				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="#">Chamber</a></li>
+				<li><a href="#">Final</a></li>
+				<li><a href="https://github.com/ing-armandoramos/wdd231">GitHub Profile</a></li>
+				<li><a href="https://www.linkedin.com/in/jesus-armando-ramos">LinkedIn</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Home</h1>
+			<section class="course-work">
+				<h2>Course Work</h2>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</section>
+			<section class="location">
+				<h2>Sinaloa, Mexico</h2>
+				<div class="image-container">
+					<picture>
+						<source media="(min-width: 1024px)" srcset="images/sinaloa.webp">
+						<source media="(min-width: 768px)" srcset="images/sinaloa.webp">
+						<img src="images/sinaloa-mobile.webp" width="375" height="250" alt="Culiacan city">
+					</picture>
+					<p>Sinaloa capital city Culiacan</p>
+				</div>
+			</section>
+			<section class="certificate">
+				<h2>Web and Computer Programming Certificate</h2>
+				<div class="filter-buttons">
+					<button id="allBtn" class="active">All</button>
+					<button id="cseBtn">CSE</button>
+					<button id="wddBtn">WDD</button>
+				</div>
+				<div class="courses-container" id="coursesContainer"></div>
+				<p class="total-credits">
+					Total Credits:
+					<span id="totalCredits">0</span>
+				</p>
+			</section>
+		</main>
+		<footer>
+			<p>
+				&copy;
+				<span id="currentYear"></span>
+				|
+				<span>Jesus Armando Ramos Ontiveros</span>
+				| Mexico
+			</p>
+			<p id="lastModified"></p>
+		</footer>
+	</body>
 </html>
