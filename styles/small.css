@@ -1,11 +1,11 @@
 
 :root {
-  --primary-color: #b71c1c;          
-  --secondary-color: #388e3c;        
-  --accent-color: #fbc02d;           
-  --cse-color: #e64a19;              
-  --wdd-color: #fff3e0;              
-  --completed-color: #00796b;        
+  --primary-color: #a72608;          
+  --secondary-color: #00695c;        
+  --accent-color: #f9a825;           
+  --cse-color: #d84315;              
+  --wdd-color: #fff8e1;              
+  --completed-color: #2e7d32;        
   --text-light: #ffffff;
   --text-dark: #212121;
   --border-color: #bdbdbd;
@@ -21,6 +21,7 @@
   --border-radius-full: 50%;
   --profile-size: 80px;
 }
+
 
 
 
