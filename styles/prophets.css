@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #c8102e;        
+    --secondary-color: #006847;       
+    --card-background: #fff8e1;       
+    --card-border: #ffd54f;           
+    --text-color: #3e2723;            
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --border-radius: 6px;
+    --box-shadow: 0 3px 6px rgba(200, 16, 46, 0.2); 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: var(--spacing-medium);
+    color: var(--text-color);
+    background-color: #fdf6e3; 
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+    border-radius: var(--border-radius);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-large);
+    padding: 0;
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-medium);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card__name {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: var(--spacing-small);
+    font-size: 1.5rem;
+}
+
+.card__birthdate,
+.card__birthplace {
+    margin: var(--spacing-small) 0;
+    font-size: 0.9rem;
+}
+
+.card__image {
+    max-width: 100%;
+    height: auto;
+    margin-top: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+footer {
+    text-align: center;
+    margin-top: var(--spacing-large);
+    padding: var(--spacing-medium);
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
