@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WDD 231 - Chamber of Commerce - Jesus Armando Ramos Ontiveros</title>
+		<meta name="description" content="Directory of businesses in the city of Culiacan, Sinaloa, Mexico. Support local business!">
+		<meta name="author" content="Jesus Armando Ramos Ontiveros">
+		<meta property="og:title" content="WDD 231 - Chamber of Commerce - Jesus Armando Ramos Ontiveros">
+		<meta property="og:description" content="Directory of businesses in the city of Culiacan, Sinaloa, Mexico">
+		<meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/chamber/images/shared/culiacan_sinaloa.svg">
+		<meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/">
+		<link rel="icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css">
+		<script src="scripts/main.js" defer></script>
+		<script src="scripts/directory.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__logo-container">
+				<img
+					src="images/shared/culiacan_sinaloa.svg"
+					alt="Culiacan Chamber of Commerce Logo"
+					class="header__logo"
+					width="100"
+					height="100"
+				>
+				<div class="header__title">
+					<h2>Culiacan</h2>
+					<p>Chamber of Commerce</p>
+				</div>
+			</div>
+			<div class="header__nav-container">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+						<li class="nav__item"><a href="directory.html" class="nav__link">Directory</a></li>
+						<li class="nav__item"><a href="join.html" class="nav__link">Join</a></li>
+						<li class="nav__item"><a href="discover.html" class="nav__link">Discover</a></li>
+					</ul>
+				</nav>
+				<div class="header__controls">
+					<button class="nav__toggle-theme" aria-label="Toggle dark mode">
+						<span class="theme-icon"></span>
+					</button>
+					<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
+				</div>
+			</div>
+		</header>
+		<main>
+			<h1 class="main__title">Business Directory</h1>
+			<div class="directory__view-controls">
+				<button id="grid-view-btn" class="view-btn view-btn--active" aria-label="Grid view">
+					<img src="images/grid-button-light.svg" alt="Grid view" width="24" height="24">
+				</button>
+				<button id="list-view-btn" class="view-btn" aria-label="List view">
+					<img src="images/table-button-light.svg" alt="List view" width="24" height="24">
+				</button>
+			</div>
+			<div id="directory-container" class="directory__container">
+				<div id="grid-view" class="directory__grid"></div>
+				<div id="list-view" class="directory__list"></div>
+			</div>
+		</main>
+		<footer class="footer">
+			<p class="footer__content">Jesus Armando Ramos Ontiveros || Chamber of Commerce</p>
+			<p class="footer__copyright">
+				&copy;
+				<span id="current-year"></span>
+				| Culiacan, Sinaloa Chamber of Commerce
+			</p>
+		</footer>
+	</body>
 </html>

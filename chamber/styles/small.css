@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #f4a300;           /* Mexican gold */
+    --secondary-color: #1a1a1a;         /* Deep charcoal */
+    --accent-color: #e63946;            /* Bougainvillea red */
+    --highlight-color: #007f8a;         /* Turquoise */
+    --background-color: #fefae0;        /* Soft Mexican cream */
+    --text-color: #333333;              /* Warm gray */
+    --light-color: #fff8f0;             /* Light off-white */
+
+    --font-family: Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    --h1-size: 2.5rem;
+    --h2-size: 2rem;
+    --h3-size: 1.75rem;
+    --h4-size: 1.5rem;
+    --h5-size: 1.25rem;
+    --h6-size: 1rem;
+    --body-size: 1rem;
+    --nav-size: 1.125rem;
+    --footer-size: 0.875rem;
+}
+
+.dark-theme {
+    --background-color: #1e1e1e;
+    --text-color: #fefae0;
+    --light-color: #2a2a2a;
+    --nav-border-color: #333;
+    --primary-color: #f4a300;
+    --accent-color: #e63946;
+    --highlight-color: #20c1c1;
+}
+
+/* Update hover and active states */
+.nav__link:hover,
+.nav__link:focus {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.dark-theme .nav__link:hover,
+.dark-theme .nav__link:focus {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.view-btn--active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.directory__card-link {
+    color: var(--highlight-color);
+}
+
+.directory__card-link:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.footer,
+.footer__content,
+.footer__copyright {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+/* Optional accent additions */
+.directory__card-title {
+    color: var(--accent-color);
+}
+
+.dark-theme .directory__card-title {
+    color: var(--highlight-color);
+}
+
+.nav__link::after {
+    background-color: var(--accent-color);
+}

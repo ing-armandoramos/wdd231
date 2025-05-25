@@ -1,92 +1,81 @@
 {
     "members": [ {
-        "name": "Desert Bloom Florist",
-            "address": "15345 W Bell Rd, Surprise, AZ 85374",
-            "phone": "(623) 214-6545",
-            "website": "https://desertbloomflorist.com",
-            "image": "images/florist.webp",
+        "name": "FELCO, Soluciones Ambientales y Tratamiento de Agua",
+            "address": "Av Gral Fernando Cuen 3300 A, Plutarco Elías Calles, 80194 Culiacán Rosales, Sin., Mexico",
+            "phone": "667 232 5657",
+            "website": "https://www.facebook.com/felcosoluciones/?locale=es_LA",
+            "image": "images/felco.webp",
             "membershipLevel": "Gold"
     }
 
     ,
         {
-        "name": "Sunrise Technology Solutions",
-            "address": "13954 W Waddell Rd, Surprise, AZ 85379",
-            "phone": "(623) 555-8732",
-            "website": "https://sunrisetechus.com",
-            "image": "images/Sunrise-Tech-logo.webp",
+        "name": "Tokengas",
+            "address": "Blvrd Alfonso Zaragoza Maytorena 1792, Desarrollo Urbano Tres Ríos, 80020 Culiacán Rosales, Sin., Mexico",
+            "phone": "667 753 3611",
+            "website": "https://tokengas.com.mx/",
+            "image": "images/tokengas.webp",
             "membershipLevel": "Platinum"
     }
 
     ,
         {
-        "name": "Canyon State Insurance",
-            "address": "16959 W Bell Rd, Suite 202, Surprise, AZ 85374",
-            "phone": "(623) 555-9134",
-            "website": "https://canyonstateins.com",
-            "image": "images/canyon-state.webp",
+        "name": "GRUPO FETASA",
+            "address": "Blvd. Emiliano Zapata 3145 Culiacán Sin., Mexico",
+            "phone": "667 503 5185",
+            "website": "https://www.fetasa.com.mx/",
+            "image": "images/fetasa.webp",
             "membershipLevel": "Silver"
     }
 
     ,
         {
-        "name": "Oasis Café & Bakery",
-            "address": "15591 N Reems Rd, Surprise, AZ 85374",
-            "phone": "(623) 555-2277",
-            "website": "https://oasiscafesurprise.com",
-            "image": "images/oasis-cafe.webp",
+        "name": "Bux Puntual",
+            "address": "Calle Girasol 1569, Margarita, 80270 Culiacán Rosales, Sin., Mexico",
+            "phone": "667 718 0808",
+            "website": "https://www.buxpuntual.com/",
+            "image": "images/buxpuntual.webp",
             "membershipLevel": "Bronze"
     }
 
     ,
         {
-        "name": "Westside Construction Co.",
-            "address": "13401 W Grand Ave, Surprise, AZ 85374",
-            "phone": "(623) 555-4488",
-            "website": "https://westsideconstructionaz.com",
-            "image": "images/westside-construction.webp",
+        "name": "Grupo AKHA",
+            "address": "C. Industrial 6 edificio 72-Int 7, La Primavera, 80199 Culiacán Rosales, Sin., Mexico",
+            "phone": "667 547 1922",
+            "website": "https://www.akha.com.mx/",
+            "image": "images/gurpoakha.webp",
             "membershipLevel": "Gold"
     }
 
     ,
         {
-        "name": "Surprise Valley Dental",
-            "address": "14418 W Meeker Blvd, Suite 100, Surprise, AZ 85379",
-            "phone": "(623) 555-3663",
-            "website": "https://surprisevalleydental.com",
-            "image": "images/surprise-valley.webp",
+        "name": "Aglos Pinturas",
+            "address": "C. Clavel 1733, Margarita, 80270 Culiacán Rosales, Sin., Mexico",
+            "phone": "667 718 5040",
+            "website": "https://aglos.com.mx/",
+            "image": "images/aglos.webp",
             "membershipLevel": "Silver"
     }
 
     ,
         {
-        "name": "AZ Solar Power Solutions",
-            "address": "13331 W Indian School Rd, Surprise, AZ 85379",
-            "phone": "(623) 555-7722",
-            "website": "https://azsolarpowersolutions.com",
-            "image": "images/az-solar.webp",
+        "name": "ISE 2000",
+            "address": "Río Lerma 1430, Popular, 80120 Culiacán Rosales, Sin., Mexico",
+            "phone": "667 717 1380",
+            "website": "https://www.ise2000.com.mx/CONOCENOS/index.php/",
+            "image": "images/ise2000.webp",
             "membershipLevel": "Platinum"
     }
 
     ,
         {
-        "name": "Cactus Financial Advisors",
-            "address": "17041 N Dysart Rd, Surprise, AZ 85378",
-            "phone": "(623) 555-1199",
-            "website": "https://cactusfinancialadvisors.com",
-            "image": "images/cactus-tech.webp",
+        "name": "GNOZIN",
+            "address": "Calle Gral. Angel Flores 834, Primer Cuadro, 80000 Culiacán Rosales, Sin., Mexico",
+            "phone": "667 750 9565",
+            "website": "https://gnozin.com/contacto/",
+            "image": "images/gnozin.webp",
             "membershipLevel": "Gold"
     }
-
-    ,
-        {
-        "name": "Desert Wind Realty",
-            "address": "15557 W Bell Rd, Suite 102, Surprise, AZ 85374",
-            "phone": "(623) 555-6090",
-            "website": "https://desertwindrealty.com",
-            "image": "images/desert-reality.webp",
-            "membershipLevel": "Silver"
-    }
-
     ]
 }

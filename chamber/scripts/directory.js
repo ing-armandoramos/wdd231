@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-	// DOM elements
 	const gridViewBtn = document.getElementById('grid-view-btn')
 	const listViewBtn = document.getElementById('list-view-btn')
 	const gridView = document.getElementById('grid-view')
 	const listView = document.getElementById('list-view')
-
-	// Toggle between grid and list views
 	gridViewBtn.addEventListener('click', () => {
 		gridView.style.display = 'grid'
 		listView.style.display = 'none'
@@ -19,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		listViewBtn.classList.add('view-btn--active')
 		gridViewBtn.classList.remove('view-btn--active')
 	})
-
-	// Fetch and display members
 	async function loadMembers() {
 		try {
 			const response = await fetch('data/members.json')
@@ -30,15 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			console.error('Error loading members:', error)
 		}
 	}
-
-	// Display members in both grid and list format
 	function displayMembers(members) {
-		// Clear containers
 		gridView.innerHTML = ''
 		listView.innerHTML = ''
 
 		members.forEach((member) => {
-			// Create grid card
 			const card = document.createElement('div')
 			card.className = 'directory__grid-card'
 			card.innerHTML = `
@@ -56,8 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `
 			gridView.appendChild(card)
-
-			// Create list item
 			const item = document.createElement('div')
 			item.className = 'directory__list-item'
 			item.innerHTML = `
@@ -68,12 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             `
 			listView.appendChild(item)
 		})
-
-		// Show grid view by default
 		gridView.style.display = 'grid'
 		listView.style.display = 'none'
 	}
-
-	// Load the members
 	loadMembers()
 })
