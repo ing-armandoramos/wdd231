@@ -14,21 +14,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		if (document.body.classList.contains('dark-theme')) {
 			
-			// Dark icons
+			
 			gridViewIcon.src = 'images/grid-button-dark.svg'
 			listViewIcon.src = 'images/table-button-dark.svg'
 		} else {
 			
-			// Light icons
+			
 			gridViewIcon.src = 'images/grid-button-light.svg'
 			listViewIcon.src = 'images/table-button-light.svg'
 		}
 	})
 
-	// Set based on system preferences
+	
 	if (document.body.classList.contains('dark-theme')) {
 		logo.src = 'images/shared/chamber-logo-dark.svg'
-		// Set dark icons at start
+		
 		if (gridViewIcon && listViewIcon) {
 			gridViewIcon.src = 'images/grid-button-dark.svg'
 			listViewIcon.src = 'images/table-button-dark.svg'

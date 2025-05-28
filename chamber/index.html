@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description"
+        content="WDD 231 - Web Frontend Development I Culiacan Sinaloa Mexico Chamber of Commerce landing. Author Jesus Armando Ramos Ontiveros">
+    <meta name="author" content="Jesus Armando Ramos Ontiveros">
+    <title>WDD 231 - Culiacan Sinaloa Chamber of Commerce Site</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/index_members.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <meta property="og:title" content="WDD 231 - Culiacan Sinaloa Chamber of Commerce Site Home">
+    <meta property="og:description" content="WDD 231 - Web Frontend Development I Culiacan Sinaloa Mexico Chamber of Commerce landing page. Author Jesus Armando Ramos Ontiveros">
+    <meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/chamber/images/sp-coc-site-home-preview.webp">
+    <meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/chamber/index.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+<header>
+    <img src="images/sp-chamber-logo.svg" alt="Culiacan Sinaloa Mexico Chamber of Commerce" width="182" height="42" loading="lazy">
+    <button type="button" id="menu" aria-label="Menu Button" tabindex="0"></button>
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html" id="home" tabindex="0" class="active">Home</a></li>
+            <li><a href="discovery.html" id="discovery" tabindex="0">Discovery</a></li>
+            <li><a href="directory.html" id="directory" tabindex="0">Business Directory</a></li>
+            <li><a href="join.html" id="join" tabindex="0">Join</a></li>
+        </ul>
+    </nav>
+</header>
+<main id="index_main">
+    <picture id="hero">
+        <source srcset="images/hero_1200_562.webp" media="(min-width: 800px)">
+        <source srcset="images/hero_640_300.webp" media="(min-width: 500px)">
+        <img src="images/hero_320_150.webp" alt="Sun Prairie, WI Hero Image Placeholder" width="320" height="150" tabindex="0">
+    </picture>
+    <div id="hero_cta">
+        <p>Come and help us build a better Culiacan for everyone!</p>
+        <button id="join-now-button">Join now!</button>
+    </div>
+    <h1>Home</h1>
+    <div id="index-content-container">
+        <section id="events">
+            <h2>Events</h2>
+            <div><img src="images/custom-calendar.svg" class="calendar-icon" alt="caledar icon" width="44" height="44"><p>May 24 @ 12 PM: Networking luncheon.</p></div>
+            <div><img src="images/custom-calendar.svg" class="calendar-icon" alt="caledar icon" width="44" height="44"><p>May 28 @  7 PM: Chamber of Commerce meeting.</p></div>
+            <div><img src="images/custom-calendar.svg" class="calendar-icon" alt="caledar icon" width="44" height="44"><p>June 3 @  7 PM: Toastmasters.</p></div>
+        </section>
+        <section id="current_weather">
+            <h2>Current Weather</h2>
+            <img id="weather-icon" src="https://openweathermap.org/img/w/02d.png" alt="weather icon which shows the current weather conditions" width="95" height="95">
+            <div id="current_weather_information">
+                <p><span id="current-date-temp"></span></p>
+                <p id="current-weather-conditions"></p>
+                <p>High: <span id="current-date-high-temp"></span>&deg;</p>
+                <p>Low: <span id="current-date-low-temp"></span>&deg;</p>
+                <p>Humidity: <span id="current-weather-humidity"></span>%</p>
+                <p>Sunrise: <span id="current-weather-sunrise-time"></span></p>
+                <p>Sunset: <span id="current-weather-sunset-time"></span></p>
+            </div>
+
+        </section>
+        <section id="weather_forecast">
+            <h2>Weather Forecast</h2>
+            <p>Today: <span id="day0temp"></span></p>
+            <p><span id="day1-day-of-week"></span>: <span id="day1temp"></span>&deg; F</p>
+            <p><span id="day2-day-of-week"></span>: <span id="day2temp"></span>&deg; F</p>
+        </section>
+        <div id="index_business_content_container" class="index_card_container">
+        </div>
+    </div>
+   
+</main>
+<footer>
+    <div class="coc_info">
+        <p tabindex="0">Culiacan Sinaloa Mexico Chamber of Commerce</p>
+        <p tabindex="0">Constitucion 113 Colonia Miguel Aleman</p>
+        <p tabindex="0">Culiacan, Sinaloa, Mexico, 80200</p>
+        <p tabindex="0">info@culiacanchamber.org</p>
+        <p><a href="tel:+526641301721" tabindex="0">+52 (664) 130-1721</a></p>
+    </div>
+
+    <div id="coc_social_media_icon_container">
+        <img src="images/youtube.svg" id="youtube_logo" alt="YouTube logo" width="54" height="54" tabindex="0">
+        <img src="images/twitter-x.svg" id="x_logo" alt="X logo" width="54" height="54" tabindex="0">
+        <img src="images/linkedin.svg" id="linkediin_logo" alt="LinkedIn logo" width="54" height="54" tabindex="0">
+    </div>
+
+    <div class="coc_info">
+        <p tabindex="0">WDD231 Class Project</p>
+        <p tabindex="0">Jesus Armando Ramos Ontiveros</p>
+        <p tabindex="0">@<span id="currentyear" tabindex="0"></span> Culiacan Sinaloa Chamber of Commerce</p>
+        <p id="lastModified" tabindex="0"></p>
+    </div>
+</footer>
+</body>
+</html>
