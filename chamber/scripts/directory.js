@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+	
 	const gridViewBtn = document.getElementById('grid-view-btn')
 	const listViewBtn = document.getElementById('list-view-btn')
 	const gridView = document.getElementById('grid-view')
@@ -28,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	function displayMembers(members) {
 		gridView.innerHTML = ''
 		listView.innerHTML = ''
-
 		members.forEach((member) => {
 			const card = document.createElement('div')
 			card.className = 'directory__grid-card'

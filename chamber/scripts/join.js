@@ -1,168 +1,115 @@
-const membershipLevels = [
-    {
-        levelName: 'Non Profit',
-        yearlyCost: 0,
-        levelNumber: 0,
-        numberOfPositionsAvaialble: -1,
-        benefits: [
-            'Featured in yearly dinner honoring Sun Prairie Non-Profit organizations',
-            'Featured on the Sun Prairie Chamber of Commerce sub-site for non-profits in the community',
-            'Opportunity to speak at the City Council\'s Best of Sun Prairie meetings',
-            'Membership in the Sun Prairie Business services Facebook group',
-            'Opportunity to play in the Sun Prairie charity golf tournament',
-            'Opportunity to apply for sponsorships or grants from companies in Sun Prairie',
-            'Free booth space at our semi-annual Sun Prairie Non-Profit convention',
-            'Advertising opportunities on the Sun Prairie city website',
-            'Member referrals'
-        ]
-    },
-    {
-        levelName: 'Bronze',
-        yearlyCost: 500,
-        levelNumber: 1,
-        numberOfPositionsAvaialble: -1,
-        benefits: [
-            'Featured in yearly dinner honoring Sun Prairie Chamber of Commerce member organizations',
-            'Featured on the Sun Prairie Chamber of Commerce sub-site for companies in the community',
-            'Membership in the Sun Prairie Businesses Facebook group',
-            'Opportunity to play in the Sun Prairie charity golf tournament',
-            'Opportunity to apply for city, county, and state grants through our \'Building Wisconsin\' initiative',
-            'Opportunity to particpate in the UW Madison intership pool',
-            'Advertising opportunities on the Sun Prairie city website',
-            'Opportunity to have a company representative appear on the Sun Pairie City podcast',
-            'Member referrals',
-            'Opportunity to attend quarterly Toastmaster dinners',
-        ]
-    },
-    {
-        levelName: 'Silver',
-        yearlyCost: 5000,
-        levelNumber: 2,
-        numberOfPositionsAvaialble: 50,
-        benefits: [
-            'Everything in the bronze level, plus....',
-            'Opportunity to submit articles to the Sun Prairie Chamber of Commerce sub-site for companies in the community',
-            'Opportunity to speak at the City Council\'s Best of Sun Prairie meetings',
-            'Opportunity to present at our semi-annual Sun Prairie Business leadership convention',
-            'Free medium booth space at our semi-annual Sun Prairie Business leadership convention',
-            'Free medium booth space at our annual Sun Prairie community builder convention',
-            'Opportunity to attend monthly business leader lunches',
-            'Monthly training sessions for business leaders by industry experts'
-        ]
-    },
-    {
-        levelName: 'Gold',
-        yearlyCost: 15000,
-        levelNumber: 3,
-        numberOfPositionsAvaialble: 12,
-        benefits: [
-            'Everything in the silver level, plus....',
-            'Opportunity for C-Suite member to be a featured speaker at yearly dinner honoring Sun Prairie Chamber of Commerce member organizations',
-            'Featured on the Sun Prairie Chamber of Commerce sub-site for companies in the community',
-            'Opportunity to submit articles to the Sun Prairie Chamber of Commerce sub-site for companies in the community',
-            'Opportunity to speak at the City Council\'s Best of Sun Prairie meetings',
-            'Company wil be listed as a sponsor for the Sun Prairie charity golf tournament',
-            'Opportunity for C-Suite member to be a featured speaker at our semi-annual Sun Prairie Business leadership convention',
-            'Free large booth space at our annual Sun Prairie community builder convention and semi-annual Sun Prairie Business leadership convention',
-            'Be listed as a featured advertiser on the Sun Prairie city website',
-            'Opportunity to have a company representative appear twice per year on the Sun Pairie City podcast',
-        ]
-    }
-]
-
-const timestamp = document.querySelector("#timestamp");
-
-timestamp.value = Date.now();
-
-const html = document.querySelector('html');
-const dialog = document.querySelector("dialog");
-
-const npMembershipButton = document.querySelector("#np-membership-button");
-const bronzeMembershipButton = document.querySelector("#bronze-membership-button");
-const silverMembershipButton = document.querySelector("#silver-membership-button");
-const goldMembershipButton = document.querySelector("#gold-membership-button");
-
-npMembershipButton.addEventListener('click', () => {
-    getMembershipLevelDetailForLevelNumber(0);
-});
-
-bronzeMembershipButton.addEventListener('click', () => {
-    getMembershipLevelDetailForLevelNumber(1);
-});
-
-silverMembershipButton.addEventListener('click', () => {
-    getMembershipLevelDetailForLevelNumber(2);
-});
-
-goldMembershipButton.addEventListener('click', () => {
-    getMembershipLevelDetailForLevelNumber(3);
-});
-
-function getMembershipLevelDetailForLevelNumber(levelNumber) {
-    console.log(levelNumber);
-    const selectedLevelArray = membershipLevels.filter((membershipLevelDetails) => membershipLevelDetails.levelNumber == levelNumber);
-
-    console.log(selectedLevelArray);
-
-    if (selectedLevelArray.length > 0) {
-        displayMembershpLevelDetailsModal(selectedLevelArray[0]); 
-    }
+function setTimestamp() {
+	const timestampField = document.getElementById('timestamp')
+	if (timestampField) {
+		const now = new Date()
+		timestampField.value = now.toISOString()
+	}
+}
+function initializeModals() {
+	const modalTriggers = document.querySelectorAll('[data-modal]')
+	const modalCloseElements = document.querySelectorAll('[data-close-modal]')
+	modalTriggers.forEach((trigger) => {
+		trigger.addEventListener('click', function () {
+			const modalId = this.getAttribute('data-modal')
+			openModal(modalId)
+		})
+	})
+	modalCloseElements.forEach((closeElement) => {
+		closeElement.addEventListener('click', function () {
+			closeModal()
+		})
+	})
+	document.addEventListener('keydown', function (event) {
+		if (event.key === 'Escape') {
+			closeModal()
+		}
+	})
 }
 
-function conditionalCloseDialog(event) {
+function animateMembershipCards() {
+	const membershipCards = document.querySelectorAll('.membership__card')
+	membershipCards.forEach((card, index) => {
+		card.classList.add('membership__card--animated')
+		card.style.setProperty('--animation-delay', `${index * 0.5}s`)
+	})
+}
+function initializeFormValidation() {
+	const form = document.querySelector('.join__form')
+	if (!form) return
+	form.addEventListener('submit', validateForm)
+}
+/**
+ * Validates the form before submission using helper text
+ * @param {Event} event
+ */
+function validateForm(event) {
+	const form = event.target
+	const requiredFields = form.querySelectorAll('[required]')
+	let isValid = true
+	let firstInvalidField = null
+	requiredFields.forEach((field) => {
+		const helpText = field.parentNode.querySelector('.form__help-text')
+		if (!field.value.trim()) {
+			isValid = false
+			if (helpText) {
+				helpText.classList.add('form__help-text--error')
+			}
+			if (!firstInvalidField) {
+				firstInvalidField = field
+			}
+		} else {
+			if (helpText) {
+				helpText.classList.remove('form__help-text--error')
+			}
+		}
+	})
+	if (!isValid) {
+		event.preventDefault()
 
-    const bondingRect = dialog.getBoundingClientRect();
-
-    if ((event.x < bondingRect.left || event.x > bondingRect.right) || (event.y < bondingRect.top || event.y > bondingRect.bottom)) {
-        dialog.close();
-        html.removeEventListener('click', conditionalCloseDialog, true);
-    }
+		if (firstInvalidField) {
+			firstInvalidField.scrollIntoView({
+				behavior: 'smooth',
+				block: 'center'
+			})
+			firstInvalidField.focus()
+		}
+	}
 }
 
-function displayMembershpLevelDetailsModal(membershipDetail) {
-    html.addEventListener('click', conditionalCloseDialog, true);
-    
-    dialog.innerHTML = "";
+function init() {
+	setTimestamp()
+	initializeModals()
+	animateMembershipCards()
+	initializeFormValidation()
+}
+document.addEventListener('DOMContentLoaded', init)
 
-    const closeButton = document.createElement("button");
-    closeButton.id = "close-dialog-button";
-    closeButton.textContent = "X";
-
-    closeButton.addEventListener('click', function() {
-        dialog.close();
-    });
-
-    const dialogHeader = document.createElement("h2");
-    dialogHeader.textContent = membershipDetail.levelName;
-    dialogHeader.appendChild(closeButton);
-
-    const numberOfSpots = document.createElement("h3");
-
-    if (membershipDetail.numberOfPositionsAvaialble == -1) {
-        numberOfSpots.textContent = "Membership Limit: None"
-    } else {
-        numberOfSpots.textContent = `Membership Limit: ${membershipDetail.numberOfPositionsAvaialble}`  
-    }
-
-    const p1 = document.createElement("p");
-
-    if (membershipDetail.yearlyCost == 0) {
-        p1.textContent = `Yearly Membershp Cost: None`;
-    } else {
-        p1.textContent = `Yearly Membershp Cost: \$${membershipDetail.yearlyCost}.00`;
-    }
-
-    dialog.appendChild(dialogHeader);
-    dialog.appendChild(numberOfSpots);
-    dialog.appendChild(p1);
-
-    membershipDetail.benefits.forEach(benefit => {
-        const p = document.createElement("p");
-        p.className = "dialog-paragraphs";
-        p.textContent = benefit
-
-        dialog.appendChild(p);    
-    });
-
-    dialog.showModal();
+/**
+ * Opens a modal by its ID
+ * @param {string} modalId
+ */
+function openModal(modalId) {
+	const modal = document.getElementById(modalId)
+	if (modal) {
+		modal.style.display = 'flex'
+		modal.setAttribute('aria-hidden', 'false')
+		const modalContent = modal.querySelector('.modal__content')
+		if (modalContent) {
+			modalContent.focus()
+		}
+		document.body.style.overflow = 'hidden'
+	}
+}
+function closeModal() {
+	const openModal = document.querySelector('.modal[style*="flex"]')
+	if (openModal) {
+		openModal.style.display = 'none'
+		openModal.setAttribute('aria-hidden', 'true')
+		document.body.style.overflow = ''
+		const modalId = openModal.id
+		const triggerButton = document.querySelector(`[data-modal="${modalId}"]`)
+		if (triggerButton) {
+			triggerButton.focus()
+		}
+	}
 }

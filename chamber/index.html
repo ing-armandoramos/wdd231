@@ -1,107 +1,325 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <link rel="icon" href="images/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description"
-        content="WDD 231 - Web Frontend Development I Culiacan Sinaloa Mexico Chamber of Commerce landing. Author Jesus Armando Ramos Ontiveros">
-    <meta name="author" content="Jesus Armando Ramos Ontiveros">
-    <title>WDD 231 - Culiacan Sinaloa Chamber of Commerce Site</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/index_members.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <meta property="og:title" content="WDD 231 - Culiacan Sinaloa Chamber of Commerce Site Home">
-    <meta property="og:description" content="WDD 231 - Web Frontend Development I Culiacan Sinaloa Mexico Chamber of Commerce landing page. Author Jesus Armando Ramos Ontiveros">
-    <meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/chamber/images/sp-coc-site-home-preview.webp">
-    <meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/chamber/index.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-</head>
-<body>
-<header>
-    <img src="images/sp-chamber-logo.svg" alt="Culiacan Sinaloa Mexico Chamber of Commerce" width="182" height="42" loading="lazy">
-    <button type="button" id="menu" aria-label="Menu Button" tabindex="0"></button>
-    <nav>
-        <ul class="navigation">
-            <li><a href="index.html" id="home" tabindex="0" class="active">Home</a></li>
-            <li><a href="discovery.html" id="discovery" tabindex="0">Discovery</a></li>
-            <li><a href="directory.html" id="directory" tabindex="0">Business Directory</a></li>
-            <li><a href="join.html" id="join" tabindex="0">Join</a></li>
-        </ul>
-    </nav>
-</header>
-<main id="index_main">
-    <picture id="hero">
-        <source srcset="images/hero_1200_562.webp" media="(min-width: 800px)">
-        <source srcset="images/hero_640_300.webp" media="(min-width: 500px)">
-        <img src="images/hero_320_150.webp" alt="Sun Prairie, WI Hero Image Placeholder" width="320" height="150" tabindex="0">
-    </picture>
-    <div id="hero_cta">
-        <p>Come and help us build a better Culiacan for everyone!</p>
-        <button id="join-now-button">Join now!</button>
-    </div>
-    <h1>Home</h1>
-    <div id="index-content-container">
-        <section id="events">
-            <h2>Events</h2>
-            <div><img src="images/custom-calendar.svg" class="calendar-icon" alt="caledar icon" width="44" height="44"><p>May 24 @ 12 PM: Networking luncheon.</p></div>
-            <div><img src="images/custom-calendar.svg" class="calendar-icon" alt="caledar icon" width="44" height="44"><p>May 28 @  7 PM: Chamber of Commerce meeting.</p></div>
-            <div><img src="images/custom-calendar.svg" class="calendar-icon" alt="caledar icon" width="44" height="44"><p>June 3 @  7 PM: Toastmasters.</p></div>
-        </section>
-        <section id="current_weather">
-            <h2>Current Weather</h2>
-            <img id="weather-icon" src="https://openweathermap.org/img/w/02d.png" alt="weather icon which shows the current weather conditions" width="95" height="95">
-            <div id="current_weather_information">
-                <p><span id="current-date-temp"></span></p>
-                <p id="current-weather-conditions"></p>
-                <p>High: <span id="current-date-high-temp"></span>&deg;</p>
-                <p>Low: <span id="current-date-low-temp"></span>&deg;</p>
-                <p>Humidity: <span id="current-weather-humidity"></span>%</p>
-                <p>Sunrise: <span id="current-weather-sunrise-time"></span></p>
-                <p>Sunset: <span id="current-weather-sunset-time"></span></p>
-            </div>
-
-        </section>
-        <section id="weather_forecast">
-            <h2>Weather Forecast</h2>
-            <p>Today: <span id="day0temp"></span></p>
-            <p><span id="day1-day-of-week"></span>: <span id="day1temp"></span>&deg; F</p>
-            <p><span id="day2-day-of-week"></span>: <span id="day2temp"></span>&deg; F</p>
-        </section>
-        <div id="index_business_content_container" class="index_card_container">
-        </div>
-    </div>
-   
-</main>
-<footer>
-    <div class="coc_info">
-        <p tabindex="0">Culiacan Sinaloa Mexico Chamber of Commerce</p>
-        <p tabindex="0">Constitucion 113 Colonia Miguel Aleman</p>
-        <p tabindex="0">Culiacan, Sinaloa, Mexico, 80200</p>
-        <p tabindex="0">info@culiacanchamber.org</p>
-        <p><a href="tel:+526641301721" tabindex="0">+52 (664) 130-1721</a></p>
-    </div>
-
-    <div id="coc_social_media_icon_container">
-        <img src="images/youtube.svg" id="youtube_logo" alt="YouTube logo" width="54" height="54" tabindex="0">
-        <img src="images/twitter-x.svg" id="x_logo" alt="X logo" width="54" height="54" tabindex="0">
-        <img src="images/linkedin.svg" id="linkediin_logo" alt="LinkedIn logo" width="54" height="54" tabindex="0">
-    </div>
-
-    <div class="coc_info">
-        <p tabindex="0">WDD231 Class Project</p>
-        <p tabindex="0">Jesus Armando Ramos Ontiveros</p>
-        <p tabindex="0">@<span id="currentyear" tabindex="0"></span> Culiacan Sinaloa Chamber of Commerce</p>
-        <p id="lastModified" tabindex="0"></p>
-    </div>
-</footer>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WDD 231 - City of culiacan Chamber of Commerce Homepage - Jesus Armando Ramos Ontiveros</title>
+		<meta name="description" content="Welcome to the homepage of the City of Culiacan Chamber of Commerce">
+		<meta name="author" content="Jesus Armando Ramos Ontiveros">
+		<meta property="og:title" content="WDD 231 - City of Culiacan Chamber of Commerce Homepage - Jesus Armando Ramos Ontiveros">
+		<meta property="og:description" content="Welcome to the homepage of the City of Culiacan Chamber of Commerce">
+		<meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/chamber/images/hero.webp">
+		<meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/chamber/index.html">
+		<link rel="icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css">
+		<script src="scripts/main.js" defer></script>
+		<script src="scripts/home.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo-container">
+					<img
+						src="images/shared/culiacan_sinaloa.svg"
+						alt="Culiacan Logo"
+						class="header__logo"
+						width="100"
+						height="100"
+					>
+					<div class="header__title">
+						<h2>City of Culiacan</h2>
+						<p>Chamber of Commerce</p>
+					</div>
+				</div>
+				<div class="header__nav-container">
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="index.html" class="nav__link">Home</a>
+							</li>
+							<li class="nav__item">
+								<a href="directory.html" class="nav__link">Directory</a>
+							</li>
+							<li class="nav__item">
+								<a href="join.html" class="nav__link">Join</a>
+							</li>
+							<li class="nav__item">
+								<a href="discover.html" class="nav__link">Discover</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__controls">
+						<button class="nav__toggle-theme" aria-label="Toggle dark mode">
+							<span class="theme-icon"></span>
+						</button>
+						<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="hero">
+				<div class="hero__content">
+					<h1 class="hero__title">
+						<strong>La Ciudad de los Tres Rios</strong>
+					</h1>
+				</div>
+				<div class="hero__image-section">
+					<img
+						src="images/hero.webp"
+						alt="Culiacan Lanscape"
+						class="hero__image"
+						width="1200"
+						height="600"
+					>
+				</div>
+			</section>
+			<section class="cta">
+				<div class="cta__container">
+					<h2 class="cta__title">Connect with Local Leaders & Businesses</h2>
+					<p class="cta__description">
+						Expand your network. Strengthen your business. Join the Culiacán Chamber of Commerce and unlock exclusive opportunities for growth.
+					</p>
+					<a href="join.html" class="cta__button">Join the City of Culiacan Chamber of Commerce</a>
+				</div>
+			</section>
+			<section class="events-weather">
+				<div class="events-weather__container">
+					<div class="events">
+						<div class="events__container">
+							<h2 class="events__title">Coming Events</h2>
+							<div class="events__grid">
+								<article class="event-card">
+									<div class="event-card__date">
+										<span class="event-card__month">Sec</span>
+										<span class="event-card__day">15</span>
+									</div>
+									<div class="event-card__content">
+										<h3 class="event-card__title">Celebrando la Independencia de Mexico!</h3>
+										<p class="event-card__description">
+											Join us for networking and holiday celebration with fellow
+											business owners.
+										</p>
+										<p class="event-card__time">3:00 PM - 8:00 PM</p>
+										<p class="event-card__location">Parque Las Riveras</p>
+									</div>
+								</article>
+								<article class="event-card">
+									<div class="event-card__date">
+										<span class="event-card__month">Oct</span>
+										<span class="event-card__day">12</span>
+									</div>
+									<div class="event-card__content">
+										<h3 class="event-card__title">Manejando la plataforma nueva del SAT</h3>
+										<p class="event-card__description">
+											Learn to use the new platform of SAT, save on time and taxes!
+										</p>
+										<p class="event-card__time">9:00 AM - 12:00 PM</p>
+										<p class="event-card__location">Auditorio de la CANACO Sinaloa</p>
+									</div>
+								</article>
+								<article class="event-card">
+									<div class="event-card__date">
+										<span class="event-card__month">Nov</span>
+										<span class="event-card__day">02</span>
+									</div>
+									<div class="event-card__content">
+										<h3 class="event-card__title">Celebracion del dia de muertos</h3>
+										<p class="event-card__description">
+											Lets gather to remember those who passed away, and made a difference in our city
+										</p>
+										<p class="event-card__time">9:00 AM - 11:00 AM</p>
+										<p class="event-card__location">Restaurante Panama Centro</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<div class="weather">
+						<div class="weather__container">
+							<h2 class="weather__title">Current Weather</h2>
+							<div class="weather__card">
+								<div class="weather__current">
+									<div class="weather__icon">
+										<img
+											src="images/day_sandstorm_icon.svg"
+											alt="Sunny weather"
+											width="64"
+											height="64"
+										>
+									</div>
+									<div class="weather__temp">
+										<span class="weather__current-temp">29°C</span>
+										<span class="weather__description">Sunny</span>
+									</div>
+								</div>
+								<div class="weather__details">
+									<div class="weather__detail">
+										<span class="weather__label">High/Low:</span>
+										<span class="weather__value">37°C / 26°C</span>
+									</div>
+									<div class="weather__detail">
+										<span class="weather__label">Humidity:</span>
+										<span class="weather__value">64%</span>
+									</div>
+									<div class="weather__detail">
+										<span class="weather__label">Sunrise:</span>
+										<span class="weather__value">5:20 AM</span>
+									</div>
+									<div class="weather__detail">
+										<span class="weather__label">Sunset:</span>
+										<span class="weather__value">6:57 PM</span>
+									</div>
+								</div>
+								<div class="weather__forecast">
+									<h3 class="weather__forecast-title">3-Day Forecast</h3>
+									<div class="weather__forecast-grid">
+										<div class="forecast-day">
+											<span class="forecast-day__name">Today</span>
+											<img
+												src="images/day_sandstorm_icon.svg"
+												alt="Sunny"
+												width="32"
+												height="32"
+											>
+											<span class="forecast-day__temp">35°C</span>
+										</div>
+										<div class="forecast-day">
+											<span class="forecast-day__name">Tomorrow</span>
+											<img
+												src="images/day_sandstorm_icon.svg"
+												alt="Sunny"
+												width="32"
+												height="32"
+											>
+											<span class="forecast-day__temp">37°C</span>
+										</div>
+										<div class="forecast-day">
+											<span class="forecast-day__name">In two days</span>
+											<img
+												src="images/day_sandstorm_icon.svg"
+												alt="Sunny"
+												width="32"
+												height="32"
+											>
+											<span class="forecast-day__temp">38°C</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="spotlights">
+				<div class="spotlights__container">
+					<h2 class="spotlights__title">Member Spotlights</h2>
+					<div class="spotlights__grid">
+						<article class="spotlight-card">
+							<div class="spotlight-card__image">
+								<img
+									src="images/fetasa.webp"
+									alt="Grupo Fetasa"
+									width="300"
+									height="200"
+								>
+							</div>
+							<div class="spotlight-card__content">
+								<h3 class="spotlight-card__title">Grupo Fetasa</h3>
+								<p class="spotlight-card__description">
+									Descubra una amplia gama de productos para construccion y herramientas de poder, todo en un solo lugar.
+								</p>
+								<div class="spotlight-card__contact">
+									<p class="spotlight-card__phone">(667) 503-5185</p>
+									<p class="spotlight-card__email">info@fetasa.com.mx</p>
+									<p class="spotlight-card__address">Blvd. Emiliano Zapata 3145 Culiacán Sin., Mexico</p>
+								</div>
+								<a href="https://www.fetasa.com.mx/" class="spotlight-card__website">Visit Website</a>
+							</div>
+						</article>
+						<article class="spotlight-card">
+							<div class="spotlight-card__image">
+								<img
+									src="images/buxpuntual.webp"
+									alt="Bux Puntual"
+									width="300"
+									height="200"
+								>
+							</div>
+							<div class="spotlight-card__content">
+								<h3 class="spotlight-card__title">Bux Puntual</h3>
+								<p class="spotlight-card__description">
+									Expertos en el Transporte de personas.
+								</p>
+								<div class="spotlight-card__contact">
+									<p class="spotlight-card__phone">(667) 718-0808</p>
+									<p class="spotlight-card__email">info@buxpuntual.com</p>
+									<p class="spotlight-card__address">Calle Girasol 1569, Margarita, 80270 Culiacán Rosales, Sin., Mexico</p>
+								</div>
+								<a href="https://www.buxpuntual.com/" class="spotlight-card__website">Visit Website</a>
+							</div>
+						</article>
+						<article class="spotlight-card">
+							<div class="spotlight-card__image">
+								<img src="images/aglos.webp" alt="Aglos Pinturas" width="300" height="200">
+							</div>
+							<div class="spotlight-card__content">
+								<h3 class="spotlight-card__title">Aglos Pinturas</h3>
+								<p class="spotlight-card__description">
+									Crea espacios armoniosos, ponle color a tu vida!
+								</p>
+								<div class="spotlight-card__contact">
+									<p class="spotlight-card__phone">(667) 718-5040</p>
+									<p class="spotlight-card__email">info@aglos.com.mx</p>
+									<p class="spotlight-card__address">C. Clavel 1733, Margarita, 80270 Culiacán Rosales, Sin., Mexico</p>
+								</div>
+								<a href="https://aglos.com.mx/" class="spotlight-card__website">Visit Website</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__contact">
+					<h3 class="footer__business-name">City of Culiacan Chamber of Commerce</h3>
+					<address class="footer__address">
+						<p>Avenida Alvaro Obregon 732 Norte Colonia Centro</p>
+						<p>Culiacan Sinaloa Mexico C.P. 80000</p>
+						<p>info@cityofculiacanchamberofcommerce.org</p>
+						<p class="footer__phone">(667) 331-3279</p>
+					</address>
+				</div>
+				<div class="footer__info">
+					<div class="footer__social">
+						<a href="#" class="footer__social-link" aria-label="Facebook">
+							<img src="images/shared/facebook.svg" alt="Facebook" width="32" height="32">
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Instagram">
+							<img src="images/shared/instagram.svg" alt="Instagram" width="32" height="32">
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Twitter">
+							<img src="images/shared/twitter.svg" alt="Twitter" width="32" height="32">
+						</a>
+					</div>
+					<div class="footer__project-info">
+						<p class="footer__project-title">WDD231 Class Project</p>
+						<p class="footer__student-name">Jesus Armando Ramos Ontiveros</p>
+						<p class="footer__copyright">
+							&copy;
+							<span id="current-year"></span>
+							City of Culiacan Chamber of Commerce
+						</p>
+						<p class="footer__last-modified">
+							Modified:
+							<span id="last-modified"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>

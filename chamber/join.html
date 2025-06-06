@@ -1,137 +1,296 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <link rel="icon" href="/images/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description"
-        content="WDD 231 - Web Frontend Development I Culiacan Sinaloa Mexico Chamber of Commerce join page. Author. Jesus Armando Ramos Ontiveros">
-    <meta name="author" content="Jesus Armando Ramos Ontiveros">
-    <title>WDD 231 - Culiacan Sinaloa Chamber of Commerce Site - Join</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/join.js" defer></script>
-    <meta property="og:title" content="WDD 231 - Culiacan Sinaloa Mexico Chamber of Commerce Site - Join">
-    <meta property="og:description" content="WDD 231 - Web Frontend Development I Culiacan Sinaloa Mexico Chamber of Commerce join page. Author Jesus Armando Ramos Ontiveros">
-    <meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/chamber/images/sp-coc-site-join-preview.webp">
-    <meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/chamber/join.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-</head>
-<body>
-<header>
-    <img src="images/sp-chamber-logo.svg" alt="Sun Prairie Wisconsin Chamber of Commerce" width="182" height="42" loading="lazy">
-    <button type="button" id="menu" aria-label="Menu Button" tabindex="0"></button>
-    <nav>
-        <ul class="navigation">
-            <li><a href="index.html" id="home" tabindex="0">Home</a></li>
-            <li><a href="discovery.html" id="discovery" tabindex="0">Discovery</a></li>
-            <li><a href="directory.html" id="directory" tabindex="0">Business Directory</a></li>
-            <li><a href="join.html" id="join" tabindex="0" class="active">Join</a></li>
-        </ul>
-    </nav>
-</header>
-<main id="membership-main">
-    <dialog id="membership-level-details"></dialog>  
-    <form method="GET" action="thankyou.html" autocomplete="on" >
-        <input name="timestamp" type="hidden" id="timestamp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WDD 231 - City of Culiacan Chamber of Commerce Join Page - Jesus Armando Ramos Ontiveros</title>
+		<meta name="description" content="Join the Cityt of Culiacan Chamber of Commerce!">
+		<meta name="author" content="Jesus Armando Ramos Ontiveros">
+		<meta property="og:title" content="WDD 231 - Cityt of Culiacan Chamber of Commerce Join - Jesus Armando Ramos Ontiveros">
+		<meta property="og:description" content="Join the Surprise Chamber of Commerce! We will get back to you soon.">
+		<meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/chamber/images/hero.webp">
+		<meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/chamber/join.html">
+		<link rel="icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css">
+		<script src="scripts/main.js" defer></script>
+		<script src="scripts/join.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__logo-container">
+				<img
+					src="images/shared/culiacan_sinaloa.svg"
+					alt="City of Culiacan Chamber of Commerce Logo"
+					class="header__logo"
+					width="100"
+					height="100"
+				>
+				<div class="header__title">
+					<h2>City of Culiacan</h2>
+					<p>Chamber of Commerce</p>
+				</div>
+			</div>
+			<div class="header__nav-container">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+						<li class="nav__item"><a href="directory.html" class="nav__link">Directory</a></li>
+						<li class="nav__item"><a href="join.html" class="nav__link">Join</a></li>
+						<li class="nav__item"><a href="discover.html" class="nav__link">Discover</a></li>
+					</ul>
+				</nav>
+				<div class="header__controls">
+					<button class="nav__toggle-theme" aria-label="Toggle dark mode">
+						<span class="theme-icon"></span>
+					</button>
+					<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
+				</div>
+			</div>
+		</header>
+		<main class="join__content">
+			<div class="join__container">
+				<h1 class="join__title">Join the City of Culiacan Chamber of Commerce</h1>
+				<div class="join__layout">
+					<section class="join__form-section">
+						<h2 class="form__title">Application Form</h2>
+						<form class="join__form" method="get" action="thankyou.html">
+							<fieldset class="form__fieldset">
+								<legend class="form__legend">Personal Information</legend>
 
-        <h1>Membership Application Form</h1>  
+								<label class="form__label">
+									First Name *
+									<input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required class="form__input">
+									<span class="form__help-text">Enter your first name</span>
+								</label>
 
-        <fieldset>
-            <legend>Applicant Information</legend>
-            <label>First Name<span class="required-asterisk">*</span> <input type="text" title="Applicant's first name." name="fname" autocomplete="given-name"
-                    required tabindex="0"></label>
-            <label>Last Name<span class="required-asterisk">*</span> <input type="text" title="Applicant's last name." name="lname" autocomplete="family-name"
-                    required tabindex="0"></label>
-            <label>Organizational Title <input type="text" title="Title of the applicant in his or her company." name="organization-title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" tabindex="0"></label>
-            <label>Email<span class="required-asterisk">*</span> <input type="email" title="Applicant's email address." name="email" autocomplete="email"
-                    placeholder="someone@gmail.com" required></label>
+								<label class="form__label">
+									Last Name *
+									<input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required class="form__input">
+									<span class="form__help-text">Enter your last name</span>
+								</label>
 
-            <label>Mobile Phone <span class="required-asterisk">*</span> <input type="tel" title="Applicant's mobile phone number." name="phone" autocomplete="tel" placeholder="1235551234" required tabindex="0"></label>
-            
-        </fieldset>
+								<label class="form__label">
+									Organization Title
+									<input type="text" name="orgTitle" title="Enter your title within your organization (minimum 5 characters, letters, hyphens, and spaces only)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{5,}" class="form__input">
+								</label>
+							</fieldset>
+							<fieldset class="form__fieldset">
+								<legend class="form__legend">Contact Information</legend>
 
-        <fieldset>
-            <legend>Business Information</legend>
-            <label>Organization Name<span class="required-asterisk">*</span> <input type="text" title="The name of the organization or company." name="organization" autocomplete="organization"
-                    required tabindex="0"></label>
-            <label>Membership Level 
-                <select name="membership-level" id="membership-level" title="Requested membership level." tabindex="0" >
-                    <option value="np">NP Membership</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-            </label>
-            <label>Business Description<textarea name="business-description" title="Description of the organization." id="business-description"
-                    rows="10" tabindex="0"></textarea></label>
-        </fieldset>
+								<label class="form__label">
+									Email Address *
+									<input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@company.com" required class="form__input">
+									<span class="form__help-text">Enter the business email address</span>
+								</label>
 
-        <input type="submit" value="Request Membership" tabindex="0">
+								<label class="form__label">
+									Mobile Phone *
+									<input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required class="form__input">
+									<span class="form__help-text">Enter your mobile phone number</span>
+								</label>
+							</fieldset>
+							<fieldset class="form__fieldset">
+								<legend class="form__legend">Business Information</legend>
 
-    </form>
-    <div id="membership-level-information">
-        <p id="membership-level-label">Membership Levels</p>
-        <section class="animated-card-fade">
-            <h2 tabindex="0">Non Profit Membership Level</h2>
-            <div class="membership-button-container">
-                <button id="np-membership-button" tabindex="0">Learn More</button>
-            </div>
-        </section>
-        <section class="animated-card-fade">
-            <h2 tabindex="0">Bronze Membership Level</h2>
-            <div class="membership-button-container">
-                <button id="bronze-membership-button" tabindex="0">Learn More</button>
-                <div id="bronze-membership-button-wrapper">
-                </div>
-            </div>
-        </section>
-        <section class="animated-card-fade">
-            <h2 tabindex="0">Silver Membership Level</h2>
-            <div class="membership-button-container">
-                <button id="silver-membership-button" tabindex="0">Learn More</button>
-                <div id="silver-membership-button-wrapper">
-                </div>
-            </div>
-        </section>
-        <section class="animated-card-fade">
-            <h2 tabindex="0">Gold Membership Level</h2>
-            <div class="membership-button-container">
-                <button id="gold-membership-button" tabindex="0">Learn More</button>
-                <div id="gold-membership-button-wrapper">
-                </div>
-            </div>
-        </section>
-    </div>
-</main>
-<footer>
-    <div class="coc_info">
-        <p tabindex="0">Culiacan Sinaloa Chamber of Commerce</p>
-        <p tabindex="0">Constitucion 113, Colonia Miguel Aleman</p>
-        <p tabindex="0">Culiacan, Sinaloa, Mexico</p>
-        <p tabindex="0">info@culiacanchamber.org</p>
-        <p><a href="tel:+526641301721" tabindex="0">+52 (664) 130-1721</a></p>
-    </div>
+								<label class="form__label">
+									Business Name *
+									<input type="text" name="businessName" title="Enter your business or organization name" autocomplete="organization" required class="form__input">
+									<span class="form__help-text">Enter your business name</span>
+								</label>
 
-    <div id="coc_social_media_icon_container">
-        <img src="images/youtube.svg" id="youtube_logo" alt="YouTube logo" width="54" height="54" tabindex="0">
-        <img src="images/twitter-x.svg" id="x_logo" alt="X logo" width="54" height="54" tabindex="0">
-        <img src="images/linkedin.svg" id="linkediin_logo" alt="LinkedIn logo" width="54" height="54" tabindex="0">
-    </div>
+								<label class="form__label">
+									Membership Level *
+									<select
+										name="membershipLevel"
+										title="Select your desired membership level"
+										required
+										class="form__select"
+									>
+										<option value="">Choose a membership level</option>
+										<option value="np">NP Membership (Non-Profit - Free)</option>
+										<option value="bronze">Bronze Membership</option>
+										<option value="silver">Silver Membership</option>
+										<option value="gold">Gold Membership</option>
+									</select>
+									<span class="form__help-text">Please select a membership level</span>
+								</label>
 
-    <div class="coc_info">
-        <p tabindex="0">WDD231 Class Project</p>
-        <p tabindex="0">Jesus Armando Ramos Ontiveros</p>
-        <p tabindex="0">@<span id="currentyear" tabindex="0"></span> Culiacan Sinaloa Chamber of Commerce</p>
-        <p id="lastModified" tabindex="0"></p>
-    </div>
-</footer>
-</body>
+								<label class="form__label">
+									Business Description
+									<textarea
+										name="businessDescription"
+										title="Describe your business or organization"
+										rows="4"
+										class="form__textarea"
+									></textarea>
+								</label>
+							</fieldset>
+							<input type="hidden" name="timestamp" id="timestamp">
+							<button type="submit" class="form__submit">Submit Application</button>
+						</form>
+					</section>
+
+					<section class="join__membership-section">
+						<h2 class="membership__title"><strong>Membership Levels</strong></h2>
+						<div class="membership__cards">
+							<div class="membership__card membership__card--np" data-level="np">
+								<h3 class="membership__card-title">NP Membership</h3>
+								<p class="membership__card-price">Free</p>
+								<p class="membership__card-description">Perfect for non-profit organizations</p>
+								<button class="membership__card-button" data-modal="np-modal">Learn More</button>
+							</div>
+							<div class="membership__card membership__card--bronze" data-level="bronze">
+								<h3 class="membership__card-title">Bronze Membership</h3>
+								<p class="membership__card-price">$150/year</p>
+								<p class="membership__card-description">Essential benefits for growing businesses</p>
+								<button class="membership__card-button" data-modal="bronze-modal">Learn More</button>
+							</div>
+							<div class="membership__card membership__card--silver" data-level="silver">
+								<h3 class="membership__card-title">Silver Membership</h3>
+								<p class="membership__card-price">$300/year</p>
+								<p class="membership__card-description">Enhanced networking and promotion</p>
+								<button class="membership__card-button" data-modal="silver-modal">Learn More</button>
+							</div>
+							<div class="membership__card membership__card--gold" data-level="gold">
+								<h3 class="membership__card-title">Gold Membership</h3>
+								<p class="membership__card-price">$500/year</p>
+								<p class="membership__card-description">Premium benefits and exclusive access</p>
+								<button class="membership__card-button" data-modal="gold-modal">Learn More</button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="modal" id="np-modal" aria-labelledby="np-modal-title" aria-hidden="true">
+				<div class="modal__backdrop" data-close-modal></div>
+				<div class="modal__content" role="dialog">
+					<div class="modal__header">
+						<h3 class="modal__title" id="np-modal-title">NP Membership Benefits</h3>
+						<button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
+					</div>
+					<div class="modal__body">
+						<ul class="modal__benefits">
+							<li>Directory listing with contact information</li>
+							<li>Access to member-only networking events</li>
+							<li>Monthly chamber newsletter</li>
+							<li>Volunteer opportunities</li>
+							<li>Community event calendar access</li>
+							<li>Resource sharing with other non-profits</li>
+						</ul>
+						<p class="modal__note">
+							<strong>No annual fee</strong>
+							- Perfect for qualifying non-profit organizations
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="bronze-modal" aria-labelledby="bronze-modal-title" aria-hidden="true">
+				<div class="modal__backdrop" data-close-modal></div>
+				<div class="modal__content" role="dialog">
+					<div class="modal__header">
+						<h3 class="modal__title" id="bronze-modal-title">Bronze Membership Benefits</h3>
+						<button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
+					</div>
+					<div class="modal__body">
+						<ul class="modal__benefits">
+							<li>Everything in NP Membership</li>
+							<li>Enhanced directory listing with logo</li>
+							<li>Business spotlight opportunity (quarterly)</li>
+							<li>Discounted event tickets (10% off)</li>
+							<li>Chamber social media promotion</li>
+							<li>Access to business education workshops</li>
+							<li>Referral opportunities</li>
+						</ul>
+						<p class="modal__price"><strong>$150 per year</strong></p>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="silver-modal" aria-labelledby="silver-modal-title" aria-hidden="true">
+				<div class="modal__backdrop" data-close-modal></div>
+				<div class="modal__content" role="dialog">
+					<div class="modal__header">
+						<h3 class="modal__title" id="silver-modal-title">Silver Membership Benefits</h3>
+						<button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
+					</div>
+					<div class="modal__body">
+						<ul class="modal__benefits">
+							<li>Everything in Bronze Membership</li>
+							<li>Priority directory placement</li>
+							<li>Monthly business spotlight opportunity</li>
+							<li>Discounted event tickets (20% off)</li>
+							<li>Free job posting on chamber website</li>
+							<li>Access to member-only business forums</li>
+							<li>Ribbon cutting ceremony promotion</li>
+							<li>Government advocacy representation</li>
+						</ul>
+						<p class="modal__price"><strong>$300 per year</strong></p>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="gold-modal" aria-labelledby="gold-modal-title" aria-hidden="true">
+				<div class="modal__backdrop" data-close-modal></div>
+				<div class="modal__content" role="dialog">
+					<div class="modal__header">
+						<h3 class="modal__title" id="gold-modal-title">Gold Membership Benefits</h3>
+						<button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
+					</div>
+					<div class="modal__body">
+						<ul class="modal__benefits">
+							<li>Everything in Silver Membership</li>
+							<li>Featured homepage spotlight (monthly)</li>
+							<li>Premium directory placement with featured badge</li>
+							<li>Free event tickets and VIP seating</li>
+							<li>Exclusive Gold member networking events</li>
+							<li>Personal business consultation sessions</li>
+							<li>Chamber event sponsorship opportunities</li>
+							<li>Direct access to chamber leadership</li>
+							<li>Priority consideration for awards and recognition</li>
+						</ul>
+						<p class="modal__price"><strong>$500 per year</strong></p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__contact">
+					<h3 class="footer__business-name">City of Culiacan Chamber of Commerce</h3>
+					<address class="footer__address">
+						<p>Avenida Alvaro Obregon 732 Norte Colonia Centro</p>
+						<p>Culiacan Sinaloa Mexico C.P. 80000</p>
+						<p>info@cityofculiacanchamberofcommerce.org</p>
+						<p>(667) 331-3279</p>
+					</address>
+				</div>
+				<div class="footer__info">
+					<div class="footer__social">
+						<a href="#" class="footer__social-link" aria-label="Facebook">
+							<img src="images/shared/facebook.svg" alt="Facebook" width="32" height="32">
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Instagram">
+							<img src="images/shared/instagram.svg" alt="Instagram" width="32" height="32">
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Twitter">
+							<img src="images/shared/twitter.svg" alt="Twitter" width="32" height="32">
+						</a>
+					</div>
+					<div class="footer__project-info">
+						<p class="footer__project-title">WDD231 Class Project</p>
+						<p class="footer__student-name">Jesus Armando Ramos Ontiveros</p>
+						<p class="footer__copyright">
+							&copy;
+							<span id="current-year"></span>
+							Cityt of Culiacan Chamber of Commerce
+						</p>
+						<p class="footer__last-modified">
+							Modified:
+							<span id="last-modified"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>

@@ -1,11 +1,17 @@
-/* Tablet and larger screens */
-@media (min-width: 640px) {
 
-    
+@media (min-width: 1024px) {
     .header {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         padding: 1rem 2rem;
+    }
+
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
     }
 
     .header__logo-container {
@@ -20,7 +26,7 @@
         margin-left: 2rem;
     }
 
-    .header__title h1 {
+    .header__title h2 {
         font-size: 2rem;
     }
 
@@ -28,7 +34,6 @@
         font-size: 1rem;
     }
 
-    
     .nav {
         position: static;
         display: block;
@@ -77,14 +82,12 @@
         color: var(--primary-color);
     }
 
-    
     .dark-theme .nav__link:hover,
     .dark-theme .nav__link:focus {
         color: var(--primary-color);
         background-color: transparent;
     }
 
-    
     .nav__toggle-theme {
         width: auto;
         padding: 0.5rem;
@@ -93,17 +96,14 @@
 
     .nav__toggle-menu {
         display: none;
-        
     }
 
-    
     main {
-        padding: 2rem;
+        margin: 0 auto;
     }
 
-    
     .directory__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .directory__list-item {
@@ -116,21 +116,257 @@
         flex: 0 0 22%;
         margin-bottom: 0;
     }
-}
-
-
-@media (min-width: 1024px) {
-    .header {
-        padding: 1rem 4rem;
+    .footer__container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        padding: 0 2rem;
+        gap: 2rem;
     }
 
-    main {
+    .footer__contact {
+        text-align: left;
+        flex: 1;
+    }
+
+    .footer__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex: 1.5;
+        gap: 2rem;
+    }
+
+    .footer__social {
+        justify-content: center;
+        margin-bottom: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer__project-info {
+        align-items: flex-end;
+    }
+    .hero__content {
+        padding: 6rem 4rem 3rem;
         max-width: 1200px;
+    }
+
+    h1.hero__title {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        letter-spacing: -0.02em;
+    }
+    .hero__image-section {
+        max-height: 800px;
+    }
+
+    .hero__image {
+        object-fit: cover;
+        aspect-ratio: 4 / 2;
+    }
+    .cta {
+        padding: 6rem;
+    }
+
+    .cta__container {
+        max-width: 1000px;
+    }
+
+    .cta__title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta__description {
+        font-size: 1.375rem;
+        margin-bottom: 3rem;
+    }
+
+    .cta__button {
+        padding: 1.25rem 3rem;
+        font-size: 1.2rem;
+    }
+    .events-weather {
+        padding: 4rem 6rem;
+    }
+
+    .events-weather__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .events__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .spotlights__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    .weather__current {
+        gap: 2rem;
+    }
+
+    .weather__current-temp {
+        font-size: 3rem;
+    }
+
+    .weather__icon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .weather__title {
+        font-size: 2rem;
+    }
+
+    .weather__card {
+        width: max-content;
+    }
+
+    .weather__details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .join__container {
+        max-width: 1500px;
         margin: 0 auto;
     }
 
-    
-    .directory__grid {
-        grid-template-columns: repeat(3, 1fr);
+    .join__title {
+        margin-bottom: 4rem;
+    }
+    .join__layout {
+        flex-direction: row;
+        gap: 4rem;
+        align-items: flex-start;
+    }
+
+    .join__form-section {
+        flex: 2;
+        padding: 1rem 3rem 0;
+    }
+
+    .join__membership-section {
+        flex: 0 0 auto;
+        position: sticky;
+        top: 2rem;
+        width: auto;
+    }
+    .form__fieldset {
+        padding: 2rem;
+    }
+
+    .form__fieldset:first-of-type .form__label:nth-child(2),
+    .form__fieldset:first-of-type .form__label:nth-child(3) {
+        display: inline-block;
+        width: calc(50% - 0.75rem);
+    }
+
+    .form__fieldset:first-of-type .form__label:nth-child(2) {
+        margin-right: 1.5rem;
+    }
+    .membership__cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .membership__card {
+        padding: 2.5rem 2rem;
+        min-height: 200px;
+    }
+
+    .membership__card-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .membership__card-price {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .membership__card-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .membership__card-button {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        margin-top: auto;
+    }
+    .modal__content {
+        max-width: 600px;
+    }
+
+    .modal__header {
+        padding: 2rem 2.5rem 1.5rem;
+    }
+
+    .modal__body {
+        padding: 1.5rem 2.5rem 2.5rem;
+    }
+    .thankyou__container {
+        max-width: 1000px;
+    }
+
+    .thankyou__message {
+        padding: 4rem 3rem;
+    }
+
+    .thankyou__title {
+        font-size: 3rem;
+    }
+
+    .thankyou__subtitle {
+        font-size: 1.375rem;
+    }
+
+    .thankyou__actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .thankyou__button {
+        flex: 0 0 auto;
+        min-width: 200px;
+    }
+    .detail__item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .detail__label {
+        width: auto;
+        min-width: 40%;
+        flex-shrink: 0;
+    }
+
+    .detail__value {
+        text-align: right;
+        flex: 1;
+    }
+
+    .detail__item--full {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .detail__item--full .detail__label {
+        width: 100%;
+    }
+
+    .detail__item--full .detail__value {
+        text-align: left;
     }
 }
