@@ -1,0 +1,18 @@
+@media only screen and (min-width: 641px){
+    figure{
+    grid-template-areas: 
+    "photo name"
+    "photo cost"
+    "photo address"
+    "photo button";
+
+}
+
+    figure img{
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1rem;
+          
+    }
+
+}
