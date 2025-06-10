@@ -1,29 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --primary-color: #F4B400;  
-    --secondary-color: #D32F2F; 
-    --accent-color: #388E3C; 
-    --text-color: #1B1B1B;
-    --background-color: #FFF8E1; 
+    --primary-color: #d62828;         
+    --secondary-color: #007f5f;       
+    --background-color: #fffbea;      
+    --text-color: #1a1a1a;            
+    --light-color: #ffffff;           
+    --muted-text-color: #666666;      
+    --secondary-text-color: #005f3f;  
+    --tertiary-text-color: #a4161a;   
+    --primary-text-color: #ff5733;    
+    --border-color: #e0d4b7;          
+    --border-color-dark: #8d6e63;
+    --accent-color: #005f3f;  
 }
-
 body {
     background-color: var(--background-color);
-    font-family: 'Quicksand', sans-serif;
+    --font-family: 'Montserrat', 'Roboto', sans-serif;
     color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 
 header, footer {
     background-color: var(--primary-color);
+    color: #ffffff;
     padding-top: 1rem;
     color: var(--text-color);
+    
 }
 
 header {
@@ -42,6 +50,15 @@ header img {
     padding: 2rem 2vw;
 }
 
+a:focus, button:focus, input:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+button:hover, input:hover {
+    filter: brightness(1.1);
+}
+
 #logo {
     width: 50px;
     height: auto;
@@ -51,7 +68,7 @@ header img {
     font-size: 2rem;
     background: none;
     border: none;
-    color: var(--text-color);
+    color: #ffffff;
     cursor: pointer;
     width: 100%;
     text-align: right;
@@ -87,7 +104,8 @@ nav.open {
 nav ul.menuLinks li a {
     display: block;
     padding: .75rem 2vw;
-    color: #fff;
+    color: #ffffff;
+    background-color: var(--secondary-color);
     text-decoration: none;
     font-weight: 600;
 }
@@ -97,7 +115,7 @@ nav li.current-menu-item {
 }
 
 nav ul.menuLinks a:hover {
-    background-color: var(--accent-color);
+    background-color: #004f3f;
 }
 
 ul.menuLinks {
@@ -137,8 +155,9 @@ figure h2 {
 
 figure img {
     grid-area: photo;
-    width: auto;
+    width: 100%;
     height: auto;
+    max-width: 400px;
     margin-bottom: 1rem;
     border-radius: 8px;
 }
@@ -158,7 +177,7 @@ figure #description {
 figure #cost {
     grid-area: cost;
     padding-bottom: 1rem;
-    color: var(--accent-color);
+    color: #333333;;
 }
 
 figure #cost, address {
@@ -198,10 +217,10 @@ figure input:hover {
     position: relative;
     top: 40rem;
     left: 1rem;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* dark green */
+    color: #ffffff;;
     border-radius: 10px;
     opacity: 0.95;
-    color: white;
     padding: 1rem;
     border: 3px solid var(--accent-color);
 }
@@ -221,7 +240,8 @@ figure input:hover {
     height: 44px;
     font-size: x-large;
     color: var(--text-color);
-    background-color: #fff;
+    background-color: #ffffff;
+    color: #1a1a1a;;
     cursor: pointer;
 }
 

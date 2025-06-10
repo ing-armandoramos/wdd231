@@ -21,7 +21,7 @@ const displayPlaces = (places) =>{
         address.textContent = `Find us at: ${place.address}`;
         cost.textContent = `Cost: ${place.cost}`;
         cost.setAttribute("id","cost");
-        photo.setAttribute("src", place.photo_url);
+        photo.setAttribute("src", place.photo_link);
         photo.setAttribute("alt", `${place.name}`);
         photo.setAttribute("loading", "lazy");
         learnMore.setAttribute("type", "submit");

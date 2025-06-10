@@ -53,7 +53,8 @@
     }
 
     figure h2, #cost, address{
-        width: 30rem;
+        max-width: 20em;
+        max-height: 20em;
         align-content: center;
     }
 
