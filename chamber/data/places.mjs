@@ -51,20 +51,6 @@ export const places = [
     "photo_link": "images/museo.webp"
   },
   {
-    "name": "Puente Negro",
-    "address": "En Parque Las Riberas",
-    "cost": "Gratis",
-    "description": "Antiguo puente industrial, hoy un atractivo arquitectónico y fotográfico.",
-    "photo_link": "images/puentenegro.webp"
-  },
-  {
-    "name": "Plazuela Rosales",
-    "address": "Centro, junto a casa rosalina",
-    "cost": "Gratis",
-    "description": "Pequeña plazuela colonial con vegetación, ideal para descansar o leer.",
-    "photo_link": "images/plazuelarosales.webp"
-  },
-  {
     "name": "Plazuela Obregón",
     "address": "Av. Álvaro Obregón",
     "cost": "Gratis",
