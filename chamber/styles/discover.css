@@ -4,22 +4,28 @@
 }
 
 :root {
-    --primary-color: #d62828;         
-    --secondary-color: #007f5f;       
-    --background-color: #fffbea;      
-    --text-color: #1a1a1a;            
+    --primary-color: #b71c1c;         
+    --secondary-color: #004d3f;        
+    --background-color: #fffbea;       
+    --text-color: #1a1a1a;             
     --light-color: #ffffff;           
-    --muted-text-color: #666666;      
-    --secondary-text-color: #005f3f;  
-    --tertiary-text-color: #a4161a;   
-    --primary-text-color: #ff5733;    
-    --border-color: #e0d4b7;          
-    --border-color-dark: #8d6e63;
-    --accent-color: #005f3f;  
+    --muted-text-color: #333333;       
+    --secondary-text-color: #00332b;   
+    --tertiary-text-color: #8a1014;    
+    --primary-text-color: #bf360c;     
+    --border-color: #c8b78f;           
+    --border-color-dark: #5d4037;      
+    --accent-color: #00332b;           
 }
+
+header, footer, #visits {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
 body {
     background-color: var(--background-color);
-    --font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
     font-size: 1rem;
     line-height: 1.5;
@@ -155,6 +161,7 @@ figure h2 {
 
 figure img {
     grid-area: photo;
+    aspect-ratio: 4/3;
     width: 100%;
     height: auto;
     max-width: 400px;
@@ -203,9 +210,13 @@ figure input:hover {
     background-color: var(--secondary-color);
 }
 
+h1,h2,h3, h4, h5, p{
+    color: #fff;
+
+}
 #visits {
     margin: 1rem;
-    background-color: var(--primary-color);
+    background-color: #004d3f;
     padding: 1rem 0.5rem;
     text-align: center;
     color: var(--text-color);
@@ -273,7 +284,8 @@ footer {
 }
 
 .social-media img {
-    width: 60px;
+    aspect-ratio: 4/3;
+    width: 40px;
     height: auto;
     border-radius: 8px;
     margin: 1rem;

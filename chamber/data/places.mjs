@@ -1,26 +1,6 @@
 
 export const places = [
-  {
-    "name": "Jardín Botánico Culiacán",
-    "address": "Calzada de las Américas Nte. 2131, Col. Burócrata",
-    "cost": "MX$20 (gratis martes)",
-    "description": "Espectacular jardín botánico de 10 ha con +2,000 especies, espacios artísticos y tours guiados.",
-    "photo_link": "images/jardinbotanico.webp"
-  },
-  {
-    "name": "Estadio Tomateros",
-    "address": "Av. Jesús Andrade S/N, Miguel Alemán",
-    "cost": "Entradas MX$150–MX$400",
-    "description": "Vive un juego de béisbol de la liga del Pacífico con ambiente animado y comida tradicional.",
-    "photo_link": "images/estadiotomateros.webp"
-  },
-  {
-    "name": "Catedral Basílica de Nuestra Señora del Rosario",
-    "address": "Prol. Álvaro Obregón S/N, Centro",
-    "cost": "Gratis",
-    "description": "Imponente catedral con arquitectura neoclásica y vitrales, ideal para fotos y visita cultural.",
-    "photo_link": "images/catedral.webp"
-  },
+  
   {
     "name": "Zoológico de Culiacán",
     "address": "Paseo Niños Héroes, Las Quintas",
@@ -57,7 +37,7 @@ export const places = [
     "photo_link": "images/islaoraba.webp"
   },
   {
-    "name": "Museo Regional de Historia de Sinaloa",
+    "name": "Museo Regional de Sinaloa",
     "address": "Centro histórico",
     "cost": "MX$40–$60",
     "description": "Exhibiciones sobre prehispánico, colonia y cultura sinaloense.",
