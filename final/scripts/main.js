@@ -6,6 +6,43 @@ import { studyTechniques as techniques } from './data.mjs';
 // Get the container where cards will be inserted
 const container = document.getElementById('techniques-container');
 
+// Create modal elements
+const modal = document.createElement('div');
+modal.id = 'instructions-modal';
+modal.classList.add('modal');
+modal.style.display = 'none';
+
+const modalContent = document.createElement('div');
+modalContent.classList.add('modal-content');
+
+const closeBtn = document.createElement('span');
+closeBtn.classList.add('close-btn');
+closeBtn.innerHTML = '&times;';
+
+const modalTitle = document.createElement('h2');
+modalTitle.id = 'modal-title';
+
+const modalText = document.createElement('p');
+modalText.id = 'modal-text';
+
+modalContent.appendChild(closeBtn);
+modalContent.appendChild(modalTitle);
+modalContent.appendChild(modalText);
+modal.appendChild(modalContent);
+document.body.appendChild(modal);
+
+// Close modal when clicking the X button
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the content
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
 // Function to create each card
 function createTechniqueCard(technique) {
   // Create card container
@@ -37,6 +74,21 @@ function createTechniqueCard(technique) {
   const pomodoros = document.createElement('p');
   pomodoros.textContent = `Study Time: ${technique.time_in_pomodoros} Pomodoros`;
   card.appendChild(pomodoros);
+
+  // Add Instructions button if instructions exist
+  if (technique.instructions) {
+    const instructionsBtn = document.createElement('button');
+    instructionsBtn.textContent = 'Instructions';
+    instructionsBtn.classList.add('instructions-btn');
+    card.appendChild(instructionsBtn);
+
+    // Show modal with instructions when button is clicked
+    instructionsBtn.addEventListener('click', () => {
+      modalTitle.textContent = `${technique.name} Instructions`;
+      modalText.textContent = technique.instructions;
+      modal.style.display = 'block';
+    });
+  }
 
   // Append card to container
   container.appendChild(card);
