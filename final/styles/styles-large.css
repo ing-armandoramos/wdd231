@@ -1,0 +1,46 @@
+/* styles/styles-large.css */
+@media (min-width: 700px) {
+  #nav-menu {
+    display: flex !important;  /* override display:none */
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    background-color: transparent;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav li {
+    margin: 0 2rem;
+  }
+
+  main {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .technique-card {
+    margin: 2rem 0;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 900px) {
+  #techniques-container {
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6";
+  }
+}

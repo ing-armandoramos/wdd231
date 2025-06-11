@@ -16,57 +16,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/learnflow.css">
-    <link rel="stylesheet" href="styles/learnflow-medium.css">
-    <link rel="stylesheet" href="styles/learnflow-large.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-large.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/nav.js" defer></script>
 </head>
 
 <body>
 
-<header>
-    <div class="header-large">
-        <img src="images/learnflowlogo.webp" alt="Logo" id="logo">
-        <div>
-            <h1>LearnFlow</h1>
-            <p>Master Your Learning Through Proven Techniques</p>
-        </div>
-        <button id="hamButton" aria-label="hamburger-button"></button>
-    </div>
+ <header>
+  <div class="header-container">
+    <img src="images/learnflowlogo.webp" alt="LearnFlow Logo" id="logo">
+    <!--<h1>LearnFlow</h1>-->
+
+    <button id="hamburger" aria-label="Menu">
+      <span class="hamburger-icon">&#9776;</span>
+    </button>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="tools.html" class="nav-link">Tools</a></li>
+        <li><a href="ambient.html" class="nav-link">Ambient</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<nav id="animated-nav">
-    <ul class="menuLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="ambient.html">Ambient</a></li>
-        <li><a href="tools.html">Tools</a></li>
-    </ul>
-</nav>
+  <main>
+    <section id="techniques-container">
+      <!-- Techniques will be inserted by main.js -->
+    </section>
+  </main>
 
-<main>
-
-    <!-- Keep your visit counter or other existing functionality -->
-    <dialog id="message">
-        <div>
-            <h2></h2>
-            <button>X</button>
-        </div>
-        <p></p>
-    </dialog>
-
-    <div id="visits">
-        <h1></h1>
-        <p></p>
-    </div>
-
-    <!-- THIS is where your techniques will be dynamically loaded -->
-    <section id="techniques-container"></section>
-
-</main>
-
-<footer>
+  <footer>
     <p>© 2025 LearnFlow</p>
-</footer>
+  </footer>
 
 </body>
 </html>

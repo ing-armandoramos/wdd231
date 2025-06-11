@@ -16,26 +16,37 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="styles/normalize.css">
-		<link rel="stylesheet" href="styles/learnflow.css">
-    <link rel="stylesheet" href="styles/learnflow-medium.css">
-		<link rel="stylesheet" href="styles/learnflow-large.css">
-		<script src="scripts/tools.js" defer></script>
+		<link rel="stylesheet" href="styles/styles.css">
+		<link rel="stylesheet" href="styles/styles-large.css">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<script type = "module" src="scripts/tools.js" defer></script>
+		<script src="scripts/nav.js" defer></script>
 </head>
 <body>
 
-  <header>
+ <header>
+  <div class="header-container">
+    <img src="images/learnflowlogo.webp" alt="LearnFlow Logo" id="logo">
     <h1>LearnFlow</h1>
-    <p>Productivity Tools for Self-Learning</p>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="tools.html">Productivity Tools</a>
-    <a href="ambient.html">Ambient Music</a>
-  </nav>
+    <button id="hamburger" aria-label="Menu">
+      <span class="hamburger-icon">&#9776;</span>
+    </button>
 
-  <main id="tools-container">
-    <!-- JavaScript will dynamically generate the content here -->
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="tools.html" class="nav-link">Tools</a></li>
+        <li><a href="ambient.html" class="nav-link">Ambient</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section id="tools-container">
+      <!-- Pomodoro Timer will be inserted here -->
+    </section>
   </main>
 
   <footer>

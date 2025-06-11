@@ -16,32 +16,42 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="styles/normalize.css">
-		<link rel="stylesheet" href="styles/learnflow.css">
-    <link rel="stylesheet" href="styles/learnflow-medium.css">
-		<link rel="stylesheet" href="styles/learnflow-large.css">
-		<script src="scripts/ambient.js" defer></script>
+		<link rel="stylesheet" href="styles/styles.css">
+		<link rel="stylesheet" href="styles/styles-large.css">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<script type = "module" src="scripts/ambient.js" defer></script>
+		<script src="scripts/nav.js" defer></script>
 </head>
 <body>
 
   <header>
+  <div class="header-container">
+    <img src="images/learnflowlogo.webp" alt="LearnFlow Logo" id="logo">
     <h1>LearnFlow</h1>
-    <p>Ambient Sounds for Focused Study</p>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="tools.html">Productivity Tools</a>
-    <a href="ambient.html">Ambient Music</a>
-  </nav>
+    <button id="hamburger" aria-label="Menu">
+      <span class="hamburger-icon">&#9776;</span>
+    </button>
 
-  <main id="ambient-container">
-    <!-- Ambient music player and fullscreen controls will be inserted here -->
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="tools.html" class="nav-link">Tools</a></li>
+        <li><a href="ambient.html" class="nav-link">Ambient</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section id="ambient-container">
+      <!-- Audio player will be inserted here -->
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 FocusForge</p>
+    <p>© 2025 LearnFlow</p>
   </footer>
 
-  
 </body>
 </html>

@@ -1,0 +1,335 @@
+/* styles/styles.css */
+
+/* General Styles */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  background-color: #023e8a;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+/* Global Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0077b6;
+  color: white;
+}
+
+/* Logo */
+#logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Desktop Nav (default hidden for mobile first) */
+#nav-menu {
+  display: none;
+}
+
+/* Hamburger button */
+#hamburger {
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Nav links */
+#nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+#nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#nav-menu ul li a.active {
+  border-bottom: 3px solid #ffb703; /* Wayfinding effect */
+}
+
+/* Medium/Large screens: flex nav visible */
+@media (min-width: 700px) {
+  #nav-menu {
+    display: block;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}
+
+/* Mobile dropdown activated class */
+#nav-menu.show {
+  display: flex;
+  flex-direction: column; /* 🧩 Stack items vertically */
+  background-color: #0077b6;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Card styles for study techniques */
+.technique-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 300px;
+}
+
+.technique-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.technique-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #0077b6;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #023e8a;
+}
+.stats-panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.stats-panel, .history-panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.history-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history-panel li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+/* Base: mobile first */
+#techniques-container {
+  display: grid;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.technique-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.technique-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Tablet view */
+@media (min-width: 600px) {
+  #techniques-container {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6";
+  }
+}
+
+/* Desktop view */
+@media (min-width: 900px) {
+  #techniques-container {
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6";
+  }
+}
+/* Default hidden menu for mobile */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #0077b6;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* When opened: vertical dropdown */
+#nav-menu.show {
+  display: flex;
+  flex-direction: column;
+  background-color: #0077b6;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Desktop mode */
+@media (min-width: 700px) {
+  #nav-menu {
+    display: flex;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}
+
+/* ========== HEADER STYLES ========== */
+
+/* Container for header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0077b6;
+  color: white;
+}
+
+/* Logo styling */
+#logo {
+  width: 200px;
+  height: auto;
+}
+
+/* Hamburger button default (mobile-first) */
+#hamburger {
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hide menu initially */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #0077b6;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Show menu when hamburger clicked */
+#nav-menu.show {
+  display: flex;
+}
+
+/* Nav link styling */
+#nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Active link highlight (wayfinding) */
+#nav-menu ul li a.active {
+  border-bottom: 3px solid #ffb703;
+}
+
+/* ========== DESKTOP STYLES ========== */
+@media (min-width: 700px) {
+  #hamburger {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 0;
+    padding: 0;
+    gap: 2rem;
+  }
+}
