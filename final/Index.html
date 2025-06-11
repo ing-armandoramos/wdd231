@@ -1,71 +1,72 @@
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>WDD 231 - Ambient Page - Jesus Armando Ramos Ontiveros</title>
-		<meta name="description" content="Website for study and concentration">
-		<meta name="author" content="Jesus Armando Ramos Ontiveros">
-		<meta property="og:title" content="WDD 231 - Website for study and concentration - Jesus Armando Ramos Ontiveros">
-		<meta property="og:description" content="Website for study and concentration">
-		<meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/final/images/sinaloa.webp">
-		<meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/final">
-		<link rel="icon" href="/images/favicon.ico">
-		<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" as="style">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="styles/normalize.css">
-		<link rel="stylesheet" href="styles/learnflow.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - LearnFlow - Jesus Armando Ramos Ontiveros</title>
+    <meta name="description" content="Website for study and concentration">
+    <meta name="author" content="Jesus Armando Ramos Ontiveros">
+    <meta property="og:title" content="WDD 231 - Website for study and concentration - Jesus Armando Ramos Ontiveros">
+    <meta property="og:description" content="Website for study and concentration">
+    <meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/final/images/sinaloa.webp">
+    <meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/final">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/learnflow.css">
     <link rel="stylesheet" href="styles/learnflow-medium.css">
-		<link rel="stylesheet" href="styles/learnflow-large.css">
-		<script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/learnflow-large.css">
+    <script type="module" src="scripts/main.js"></script>
 </head>
+
 <body>
 
-  <header>
-     <div class="header-large">
-        <header>
-            <img src="images/learnflowlogo.webp" alt="Logo" id="logo">
-            <div>
-                <h1>LearnFlow</h1>
-                <p>Master Your Learning Through Proven Techniques</p>
-            </div>
-            <button id="hamButton" aria-label="hamburger-button"></button>    
-        </header>  
-  </header>
-  <nav id="animated-nav">   
-            <ul class="menuLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li class="current-menu-item"><a href="#">Discover</a></li>
-            </ul>
-        </nav>
-    </div>
-    <main>
-        <dialog id="message">
-            <div>
-                <h2></h2>
-                <button>X</button>
-            </div>
-            <p></p>
-        </dialog>
-        <div id="visits">
-            <h1></h1>
-            <p></p>
+<header>
+    <div class="header-large">
+        <img src="images/learnflowlogo.webp" alt="Logo" id="logo">
+        <div>
+            <h1>LearnFlow</h1>
+            <p>Master Your Learning Through Proven Techniques</p>
         </div>
-        <div id="cards"></div>
-    </main>
+        <button id="hamButton" aria-label="hamburger-button"></button>
+    </div>
+</header>
 
-  <main id="techniques-container">
-    <div id="cards"></div>
-  </main>
+<nav id="animated-nav">
+    <ul class="menuLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ambient.html">Ambient</a></li>
+        <li><a href="tools.html">Tools</a></li>
+    </ul>
+</nav>
 
-  <footer>
-    <p>© 2025 FocusForge</p>
-  </footer>
+<main>
 
-  
+    <!-- Keep your visit counter or other existing functionality -->
+    <dialog id="message">
+        <div>
+            <h2></h2>
+            <button>X</button>
+        </div>
+        <p></p>
+    </dialog>
+
+    <div id="visits">
+        <h1></h1>
+        <p></p>
+    </div>
+
+    <!-- THIS is where your techniques will be dynamically loaded -->
+    <section id="techniques-container"></section>
+
+</main>
+
+<footer>
+    <p>© 2025 LearnFlow</p>
+</footer>
+
 </body>
 </html>
