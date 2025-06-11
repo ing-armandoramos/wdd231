@@ -24,18 +24,42 @@
 <body>
 
   <header>
-    <h1>LearnFlow</h1>
-    <p>Master Your Learning Through Proven Techniques</p>
+     <div class="header-large">
+        <header>
+            <img src="images/learnflowlogo.webp" alt="Logo" id="logo">
+            <div>
+                <h1>LearnFlow</h1>
+                <p>Master Your Learning Through Proven Techniques</p>
+            </div>
+            <button id="hamButton" aria-label="hamburger-button"></button>    
+        </header>  
   </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="tools.html">Productivity Tools</a>
-    <a href="ambient.html">Ambient Music</a>
-  </nav>
+  <nav id="animated-nav">   
+            <ul class="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li class="current-menu-item"><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <dialog id="message">
+            <div>
+                <h2></h2>
+                <button>X</button>
+            </div>
+            <p></p>
+        </dialog>
+        <div id="visits">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div id="cards"></div>
+    </main>
 
   <main id="techniques-container">
-    <!-- Study techniques will be dynamically inserted here via JavaScript -->
+    <div id="cards"></div>
   </main>
 
   <footer>

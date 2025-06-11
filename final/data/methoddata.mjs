@@ -1,4 +1,4 @@
-[
+export const places = [
   {
     "name": "Pomodoro Technique",
     "time_to_learn_minutes": 60,
