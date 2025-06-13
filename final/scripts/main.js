@@ -1,4 +1,4 @@
-// scripts/main.js
+/*// scripts/main.js
 
 // Import the techniques from data file (ES Module)
 import { studyTechniques as techniques } from './data.mjs';
@@ -53,6 +53,9 @@ function createTechniqueCard(technique) {
   const img = document.createElement('img');
   img.src = technique.photo_url;
   img.alt = technique.name;
+  img.loading = 'lazy';
+  img.width = 300;
+  img.height = 200;
   card.appendChild(img);
 
   // Add name as title
@@ -96,3 +99,89 @@ function createTechniqueCard(technique) {
 
 // Iterate over all techniques and create cards
 techniques.forEach(createTechniqueCard);
+
+*/
+
+// Import the techniques from data file (ES Module)
+import { studyTechniques as techniques } from './data.mjs';
+
+// Get the container where cards will be inserted
+const container = document.getElementById('techniques-container');
+
+// --- Optimized Modal Creation (Single Event Listener) ---
+const modal = document.createElement('div');
+modal.id = 'instructions-modal';
+modal.classList.add('modal');
+modal.style.display = 'none';
+modal.innerHTML = `
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+  </div>
+`;
+document.body.appendChild(modal);
+
+// Event delegation for modal close (better performance)
+document.body.addEventListener('click', (e) => {
+  if (e.target.classList.contains('close-btn') || e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// --- Optimized Card Creation (DocumentFragment + Intersection Observer) ---
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target.querySelector('img');
+      if (img && !img.src) {
+        img.src = img.dataset.src; // Load image only when visible
+      }
+      observer.unobserve(entry.target);
+    }
+  });
+}, { rootMargin: '100px' }); // Start loading 100px before entering viewport
+
+// Create all cards at once (minimize reflows)
+const fragment = document.createDocumentFragment();
+
+techniques.forEach(technique => {
+  const card = document.createElement('div');
+  card.classList.add('technique-card');
+
+  // Image (lazy-loaded with placeholder)
+  const img = document.createElement('img');
+  img.dataset.src = technique.photo_url; // Store URL in data-src
+  img.alt = technique.name;
+  img.loading = 'lazy';
+  img.width = 300;
+  img.height = 200;
+  img.style.backgroundColor = '#f0f0f0'; // Placeholder color
+  card.appendChild(img);
+
+  // Card content (optimized string concatenation)
+  card.innerHTML += `
+    <h3>${technique.name}</h3>
+    <p>Author: ${technique.author}</p>
+    <p>Time to Learn: ${technique.time_to_learn_minutes} min</p>
+    <p>Study Time: ${technique.time_in_pomodoros} Pomodoros</p>
+  `;
+
+  // Instructions button (conditionally added)
+  if (technique.instructions) {
+    const btn = document.createElement('button');
+    btn.className = 'instructions-btn';
+    btn.textContent = 'Instructions';
+    btn.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modal.querySelector('#modal-title').textContent = `${technique.name} Instructions`;
+      modal.querySelector('#modal-text').textContent = technique.instructions;
+    });
+    card.appendChild(btn);
+  }
+
+  fragment.appendChild(card);
+  observer.observe(card); // Track visibility for lazy loading
+});
+
+container.appendChild(fragment);

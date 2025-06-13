@@ -2,7 +2,9 @@
 
 /* General Styles */
 body {
-  font-family: 'DM Sans', sans-serif;
+  --heading-font: "Roboto Flex", serif;
+  --body-font: 'Open Sans', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   background-color: #F5F5F5;
   margin: 0;
   padding: 0;
