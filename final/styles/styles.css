@@ -363,7 +363,7 @@ button:hover {
   border-radius: 0 4px 4px 0;
 }
 /* Modal styles */
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -385,6 +385,78 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: modalopen 0.3s;
 }
+
+.modal__benefits {
+  background-color: #fefefe;
+  margin-top: 15px;
+  list-style: disc inside;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}*/
+/* Modal general container */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content box */
+.modal__content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: modalopen 0.3s;
+}
+
+/* Modal header (title + close button container) */
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Modal title */
+.modal__title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Close button */
+.modal__close {
+  background: none;
+  background-color: #023e8a;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.modal__close:hover {
+  color: #000;
+}
+
+/* Benefits list */
+.modal__benefits {
+  margin-top: 15px;
+  list-style: disc inside;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 
 @keyframes modalopen {
   from {opacity: 0; transform: translateY(-50px);}
