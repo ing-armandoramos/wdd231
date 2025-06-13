@@ -20,7 +20,7 @@ export const studyTechniques = [
     "name": "Spaced Repetition",
     "time_to_learn_minutes": 120,
     "time_in_pomodoros": 5,
-    "author": "Hermann Ebbinghaus (popularizado por Anki)",
+    "author": "Hermann Ebbinghaus",
     "photo_url": "images/deepwork.svg",
     "instructions": "Spaced repetition leverages memory decay by reviewing material at increasing intervals. Use apps like Anki or a planner to schedule reviews: shortly after learning, then days/weeks later. Focus on challenging material more frequently. Effective for language learning, medical studies, or retaining large volumes of information. Consistency is key—dedicate 10-20 minutes daily."
   },
