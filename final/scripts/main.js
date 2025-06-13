@@ -149,7 +149,7 @@ techniques.forEach(technique => {
   const card = document.createElement('div');
   card.classList.add('technique-card');
 
-  // Image (lazy-loaded with placeholder)
+  // Image 
   const img = document.createElement('img');
   img.dataset.src = technique.photo_url; 
   img.alt = technique.name;

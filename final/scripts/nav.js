@@ -1,11 +1,10 @@
-// nav.js
 
 // Select elements
 const hamburgerBtn = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 const hamburgerIcon = hamburgerBtn.querySelector('.hamburger-icon');
 
-// Hamburger toggle behavior
+// Hamburger toggle
 hamburgerBtn.addEventListener("click", () => {
   navMenu.classList.toggle("show");
 
@@ -17,7 +16,7 @@ hamburgerBtn.addEventListener("click", () => {
   }
 });
 
-// Wayfinding: highlight active page
+// Wayfinding
 const currentPath = window.location.pathname;
 document.querySelectorAll(".nav-link").forEach(link => {
   if (currentPath.includes(link.getAttribute("href"))) {
