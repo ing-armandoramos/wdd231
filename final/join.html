@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>WDD 231 - City of Culiacan Chamber of Commerce Join Page - Jesus Armando Ramos Ontiveros</title>
-		<meta name="description" content="Join the Cityt of Culiacan Chamber of Commerce!">
+		<title>WDD 231 - Feedback Page - Jesus Armando Ramos Ontiveros</title>
+		<meta name="description" content="Feedback Page for the LearnFlow website">
 		<meta name="author" content="Jesus Armando Ramos Ontiveros">
-		<meta property="og:title" content="WDD 231 - Cityt of Culiacan Chamber of Commerce Join - Jesus Armando Ramos Ontiveros">
-		<meta property="og:description" content="Join the Surprise Chamber of Commerce! We will get back to you soon.">
-		<meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/chamber/images/hero.webp">
-		<meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/chamber/join.html">
+		<meta property="og:title" content="WDD 231 - Leave a Feedback for the LearnFlow website - Jesus Armando Ramos Ontiveros">
+		<meta property="og:description" content="Leave a feedback comment. We will get back to you soon.">
+		<meta property="og:image" content="https://ing-armandoramos.github.io/wdd231/final/images/deepwork.webp">
+		<meta property="og:url" content="https://ing-armandoramos.github.io/wdd231/final/join.html">
 		<link rel="icon" href="/images/favicon.ico">
 		<link rel="stylesheet" href="styles/normalize.css">
 		<link rel="stylesheet" href="styles/styles.css">
@@ -21,142 +21,107 @@
 		<header class="header">
 			<div class="header__logo-container">
 				<img
-					src="images/shared/culiacan_sinaloa.svg"
-					alt="City of Culiacan Chamber of Commerce Logo"
+					src="images/learnflowlogo.webp"
+					alt="Learn by entering the flow state"
 					class="header__logo"
 					width="100"
 					height="100"
 				>
 				<div class="header__title">
-					<h2>City of Culiacan</h2>
-					<p>Chamber of Commerce</p>
+					<h2>LearnFlow</h2>
+					<p>Learn by entering the flow state</p>
 				</div>
 			</div>
 			<div class="header__nav-container">
 				<nav class="nav">
 					<ul class="nav__list">
 						<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-						<li class="nav__item"><a href="directory.html" class="nav__link">Directory</a></li>
-						<li class="nav__item"><a href="join.html" class="nav__link">Join</a></li>
-						<li class="nav__item"><a href="discover.html" class="nav__link">Discover</a></li>
+						<li class="nav__item"><a href="tools.html" class="nav__link">Tools</a></li>
+						<li class="nav__item"><a href="ambient.html" class="nav__link">Ambient</a></li>
+						<li class="nav__item"><a href="join.html" class="nav__link">Feedback</a></li>
 					</ul>
 				</nav>
-				<div class="header__controls">
-					<button class="nav__toggle-theme" aria-label="Toggle dark mode">
-						<span class="theme-icon"></span>
-					</button>
-					<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
-				</div>
 			</div>
 		</header>
 		<main class="join__content">
 			<div class="join__container">
-				<h1 class="join__title">Join the City of Culiacan Chamber of Commerce</h1>
+				<h1 class="join__title">Leave Feedback. We would love to hear your opinion</h1>
 				<div class="join__layout">
 					<section class="join__form-section">
-						<h2 class="form__title">Application Form</h2>
+						<h2 class="form__title">Feedback Form</h2>
 						<form class="join__form" method="get" action="thankyou.html">
 							<fieldset class="form__fieldset">
 								<legend class="form__legend">Personal Information</legend>
-
+								<br></br>
 								<label class="form__label">
-									First Name *
-									<input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required class="form__input">
+									Name *
+									<input type="text" name="firstName" title="Enter your full name" autocomplete="given-name" required class="form__input">
 									<span class="form__help-text">Enter your first name</span>
 								</label>
-
-								<label class="form__label">
-									Last Name *
-									<input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required class="form__input">
-									<span class="form__help-text">Enter your last name</span>
-								</label>
-
-								<label class="form__label">
-									Organization Title
-									<input type="text" name="orgTitle" title="Enter your title within your organization (minimum 5 characters, letters, hyphens, and spaces only)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{5,}" class="form__input">
-								</label>
-							</fieldset>
-							<fieldset class="form__fieldset">
+								<br></br>
+								<fieldset class="form__fieldset">
 								<legend class="form__legend">Contact Information</legend>
-
+								<br></br>
 								<label class="form__label">
 									Email Address *
 									<input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@company.com" required class="form__input">
-									<span class="form__help-text">Enter the business email address</span>
-								</label>
-
-								<label class="form__label">
-									Mobile Phone *
-									<input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required class="form__input">
-									<span class="form__help-text">Enter your mobile phone number</span>
+									<span class="form__help-text">Enter your email address</span>
 								</label>
 							</fieldset>
-							<fieldset class="form__fieldset">
-								<legend class="form__legend">Business Information</legend>
-
+							<br></br>
 								<label class="form__label">
-									Business Name *
-									<input type="text" name="businessName" title="Enter your business or organization name" autocomplete="organization" required class="form__input">
-									<span class="form__help-text">Enter your business name</span>
-								</label>
-
-								<label class="form__label">
-									Membership Level *
+									Section to improve *
 									<select
 										name="membershipLevel"
-										title="Select your desired membership level"
+										title="Select your desired section to improve"
 										required
 										class="form__select"
 									>
-										<option value="">Choose a membership level</option>
-										<option value="np">NP Membership (Non-Profit - Free)</option>
-										<option value="bronze">Bronze Membership</option>
-										<option value="silver">Silver Membership</option>
-										<option value="gold">Gold Membership</option>
+										<option value="">Choose a section to improve</option>
+										<option value="Methods">Landing page - Methods page</option>
+										<option value="Tools">Tools page</option>
+										<option value="Ambient">Ambient page</option>
 									</select>
-									<span class="form__help-text">Please select a membership level</span>
+									<span class="form__help-text">Please select your desired section to improve</span>
+									<br></br>
 								</label>
 
 								<label class="form__label">
-									Business Description
+									Write your feedback please:
 									<textarea
 										name="businessDescription"
-										title="Describe your business or organization"
+										title="Write your feedback please"
 										rows="4"
 										class="form__textarea"
 									></textarea>
 								</label>
 							</fieldset>
 							<input type="hidden" name="timestamp" id="timestamp">
-							<button type="submit" class="form__submit">Submit Application</button>
+							<button type="submit" class="form__submit">Send Feedback</button>
 						</form>
 					</section>
 
 					<section class="join__membership-section">
-						<h2 class="membership__title"><strong>Membership Levels</strong></h2>
+						<h2 class="membership__title"><strong>Opportunity areas</strong></h2>
 						<div class="membership__cards">
 							<div class="membership__card membership__card--np" data-level="np">
-								<h3 class="membership__card-title">NP Membership</h3>
-								<p class="membership__card-price">Free</p>
-								<p class="membership__card-description">Perfect for non-profit organizations</p>
+								<h3 class="membership__card-title">Methods</h3>
+								<p class="membership__card-description">Help us with a new method or correct an existing one</p>
 								<button class="membership__card-button" data-modal="np-modal">Learn More</button>
 							</div>
 							<div class="membership__card membership__card--bronze" data-level="bronze">
-								<h3 class="membership__card-title">Bronze Membership</h3>
-								<p class="membership__card-price">$150/year</p>
-								<p class="membership__card-description">Essential benefits for growing businesses</p>
+								<h3 class="membership__card-title">Tools</h3>
+								<p class="membership__card-description">Recommend a tool that we can implement</p>
 								<button class="membership__card-button" data-modal="bronze-modal">Learn More</button>
 							</div>
 							<div class="membership__card membership__card--silver" data-level="silver">
-								<h3 class="membership__card-title">Silver Membership</h3>
-								<p class="membership__card-price">$300/year</p>
-								<p class="membership__card-description">Enhanced networking and promotion</p>
+								<h3 class="membership__card-title">Ambient</h3>
+								<p class="membership__card-description">Tell us about music that you would like to listen to</p>
 								<button class="membership__card-button" data-modal="silver-modal">Learn More</button>
 							</div>
 							<div class="membership__card membership__card--gold" data-level="gold">
-								<h3 class="membership__card-title">Gold Membership</h3>
-								<p class="membership__card-price">$500/year</p>
-								<p class="membership__card-description">Premium benefits and exclusive access</p>
+								<h3 class="membership__card-title">Anything Else</h3>
+								<p class="membership__card-description">Anything that you recomment we will implement!</p>
 								<button class="membership__card-button" data-modal="gold-modal">Learn More</button>
 							</div>
 						</div>
@@ -167,21 +132,20 @@
 				<div class="modal__backdrop" data-close-modal></div>
 				<div class="modal__content" role="dialog">
 					<div class="modal__header">
-						<h3 class="modal__title" id="np-modal-title">NP Membership Benefits</h3>
+						<h3 class="modal__title" id="np-modal-title">Methods</h3>
 						<button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
 					</div>
 					<div class="modal__body">
 						<ul class="modal__benefits">
-							<li>Directory listing with contact information</li>
-							<li>Access to member-only networking events</li>
-							<li>Monthly chamber newsletter</li>
-							<li>Volunteer opportunities</li>
-							<li>Community event calendar access</li>
-							<li>Resource sharing with other non-profits</li>
+							<li>Better knowledge retention – Learners remember and apply information more effectively.</li>
+							<li>More engagement – Students are more motivated and involved in the learning process.</li>
+							<li>Adaptability to different learning styles – Methods can suit visual, auditory, kinesthetic, or reading/writing learners.</li>
+							<li>Faster learning – Optimized methods reduce the time needed to grasp new concepts.</li>
+							<li>Stronger critical thinking skills – Active and reflective methods promote deeper understanding.</li>
+							<li>Increased self-efficacy – Learners gain confidence in their ability to learn and solve problems.</li>
 						</ul>
 						<p class="modal__note">
-							<strong>No annual fee</strong>
-							- Perfect for qualifying non-profit organizations
+							<strong>Learning to learn should be free</strong>
 						</p>
 					</div>
 				</div>
@@ -190,20 +154,18 @@
 				<div class="modal__backdrop" data-close-modal></div>
 				<div class="modal__content" role="dialog">
 					<div class="modal__header">
-						<h3 class="modal__title" id="bronze-modal-title">Bronze Membership Benefits</h3>
+						<h3 class="modal__title" id="bronze-modal-title">Tools</h3>
 						<button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
 					</div>
 					<div class="modal__body">
 						<ul class="modal__benefits">
-							<li>Everything in NP Membership</li>
-							<li>Enhanced directory listing with logo</li>
-							<li>Business spotlight opportunity (quarterly)</li>
-							<li>Discounted event tickets (10% off)</li>
-							<li>Chamber social media promotion</li>
-							<li>Access to business education workshops</li>
-							<li>Referral opportunities</li>
+							<li>Access to diverse resources – Modern tools provide a variety of materials and perspectives.</li>
+							<li>Personalized learning – Tools can adapt content to the learner’s level and pace.</li>
+							<li>Interactive experiences – Simulations, gamification, and AI can make learning more dynamic.</li>
+							<li>Real-time feedback – Immediate corrections and guidance help learners stay on track.</li>
+							<li>Collaboration opportunities – Digital tools enable easy peer interaction and teamwork.</li>
+							<li>Data-driven insights – Analytics can help track progress and identify areas needing improvement.</li>
 						</ul>
-						<p class="modal__price"><strong>$150 per year</strong></p>
 					</div>
 				</div>
 			</div>
@@ -211,21 +173,18 @@
 				<div class="modal__backdrop" data-close-modal></div>
 				<div class="modal__content" role="dialog">
 					<div class="modal__header">
-						<h3 class="modal__title" id="silver-modal-title">Silver Membership Benefits</h3>
+						<h3 class="modal__title" id="silver-modal-title">Ambient</h3>
 						<button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
 					</div>
 					<div class="modal__body">
 						<ul class="modal__benefits">
-							<li>Everything in Bronze Membership</li>
-							<li>Priority directory placement</li>
-							<li>Monthly business spotlight opportunity</li>
-							<li>Discounted event tickets (20% off)</li>
-							<li>Free job posting on chamber website</li>
-							<li>Access to member-only business forums</li>
-							<li>Ribbon cutting ceremony promotion</li>
-							<li>Government advocacy representation</li>
+							<li>Reduced distractions – A well-designed space helps learners focus.</li>
+							<li>Comfort and well-being – Good lighting, seating, and climate control support physical comfort.</li>
+							<li>Positive emotional atmosphere – Encouraging environments reduce anxiety and foster motivation.</li>
+							<li>Stimulating decor and design – Inspiring visuals and organization boost creativity and engagement.</li>
+							<li>Better accessibility – Inclusive environments accommodate diverse needs and abilities.</li>
+							<li>Safe and supportive space – Learners feel secure and valued, enhancing participation and risk-taking.</li>
 						</ul>
-						<p class="modal__price"><strong>$300 per year</strong></p>
 					</div>
 				</div>
 			</div>
@@ -233,22 +192,18 @@
 				<div class="modal__backdrop" data-close-modal></div>
 				<div class="modal__content" role="dialog">
 					<div class="modal__header">
-						<h3 class="modal__title" id="gold-modal-title">Gold Membership Benefits</h3>
+						<h3 class="modal__title" id="gold-modal-title">Help with anything</h3>
 						<button class="modal__close" data-close-modal aria-label="Close modal">&times;</button>
 					</div>
 					<div class="modal__body">
 						<ul class="modal__benefits">
-							<li>Everything in Silver Membership</li>
-							<li>Featured homepage spotlight (monthly)</li>
-							<li>Premium directory placement with featured badge</li>
-							<li>Free event tickets and VIP seating</li>
-							<li>Exclusive Gold member networking events</li>
-							<li>Personal business consultation sessions</li>
-							<li>Chamber event sponsorship opportunities</li>
-							<li>Direct access to chamber leadership</li>
-							<li>Priority consideration for awards and recognition</li>
+							<li>Deepens your own understanding. Teaching others forces you to clarify concepts, which strengthens your own mastery.</li>
+							<li>Develops communication skills. Explaining ideas improves your ability to express thoughts clearly and adjust to others’ needs.</li>
+							<li>Builds empathy and patience. Supporting others helps you understand different learning paces and challenges.</li>
+							<li>Creates a collaborative learning culture. Encouraging knowledge-sharing fosters teamwork, trust, and a positive group dynamic.</li>
+							<li>Boosts confidence and leadership. Helping others can increase your sense of competence and inspire you to take initiative.</li>
+							<li>Reinforces long-term retention. Teaching and discussing material helps move information from short-term to long-term memory.</li>
 						</ul>
-						<p class="modal__price"><strong>$500 per year</strong></p>
 					</div>
 				</div>
 			</div>
@@ -256,11 +211,11 @@
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__contact">
-					<h3 class="footer__business-name">City of Culiacan Chamber of Commerce</h3>
+					<h3 class="footer__business-name">LearnFlow</h3>
 					<address class="footer__address">
 						<p>Avenida Alvaro Obregon 732 Norte Colonia Centro</p>
 						<p>Culiacan Sinaloa Mexico C.P. 80000</p>
-						<p>info@cityofculiacanchamberofcommerce.org</p>
+						<p>info@learnflow.org</p>
 						<p>(667) 331-3279</p>
 					</address>
 				</div>
@@ -282,7 +237,7 @@
 						<p class="footer__copyright">
 							&copy;
 							<span id="current-year"></span>
-							Cityt of Culiacan Chamber of Commerce
+							Learnflow
 						</p>
 						<p class="footer__last-modified">
 							Modified:
