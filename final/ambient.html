@@ -21,6 +21,7 @@
 		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<script type = "module" src="scripts/ambient.js" defer></script>
 		<script src="scripts/nav.js" defer></script>
+    <script src="scripts/lastmodified.js" defer></script>
 </head>
 <body>
 
@@ -50,9 +51,44 @@
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 LearnFlow</p>
-  </footer>
+  <footer class="footer">
+			<div class="footer__container">
+				<div class="footer__contact">
+					<h3 class="footer__business-name">LearnFlow</h3>
+					<address class="footer__address">
+						<p>Avenida Alvaro Obregon 732 Norte Colonia Centro</p>
+						<p>Culiacan Sinaloa Mexico C.P. 80000</p>
+						<p>info@learnflow.org</p>
+						<p>(667) 331-3279</p>
+					</address>
+				</div>
+				<div class="footer__info">
+					<div class="footer__social">
+						<a href="#" class="footer__social-link" aria-label="Facebook">
+							<img src="images/facebook.svg" alt="Facebook" width="32" height="32">
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Instagram">
+							<img src="images/instagram.svg" alt="Instagram" width="32" height="32">
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Twitter">
+							<img src="images/twitter.svg" alt="Twitter" width="32" height="32">
+						</a>
+					</div>
+					<div class="footer__project-info">
+						<p class="footer__project-title">WDD231 Class Project</p>
+						<p class="footer__student-name">Jesus Armando Ramos Ontiveros</p>
+						<p class="footer__copyright">
+						<span id="current-year"></span>
+							Learnflow
+						</p>
+						<p class="footer__last-modified">
+							Modified:
+							<span id="last-modified"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 </body>
 </html>

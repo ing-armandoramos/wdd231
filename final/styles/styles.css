@@ -90,17 +90,6 @@ footer {
   border-bottom: 3px solid #ffb703; /* Wayfinding effect */
 }
 
-/* Medium/Large screens: flex nav visible */
-@media (min-width: 700px) {
-  #nav-menu {
-    display: block;
-  }
-
-  #hamburger {
-    display: none;
-  }
-}
-
 /* Mobile dropdown activated class */
 #nav-menu.show {
   display: flex;
@@ -363,7 +352,7 @@ button:hover {
   border-radius: 0 4px 4px 0;
 }
 /* Modal styles */
-/* .modal {
+ .modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -393,7 +382,7 @@ button:hover {
   color: #333;
   font-size: 1rem;
   line-height: 1.5;
-}*/
+}
 /* Modal general container */
 .modal {
   display: none;
