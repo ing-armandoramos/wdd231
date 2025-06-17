@@ -1,157 +1,200 @@
-/* styles/styles.css */
-
-/* General Styles */
-body {
-  --heading-font: "Roboto Flex", serif;
-  --body-font: 'Open Sans', sans-serif;
-  font-family: "Roboto Flex", sans-serif;
-  background-color: #F5F5F5;
-  margin: 0;
-  padding: 0;
-  color: #333;
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('/fonts/roboto-flex.woff2') format('woff2');
+  font-display: swap;
 }
 
-header {
-  background-color: #0077b6;
+:root {
+  --heading-font: "Roboto Flex", serif;
+  --body-font: "Roboto Flex", serif;
+  --primary-color: #0077b6;
+  --secondary-color: #023e8a;
+  --accent-color: #ffb703;
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+}
+
+body {
+  font-family: var(--heading-font);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+header, footer {
+  background-color: var(--primary-color);
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
+  font-family: var(--body-font);
+}
+
+main {
+  padding: 1rem;
+  min-height: 600px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 0;
   margin: 0;
   background-color: #023e8a;
+}
+
+nav li {
+  margin: 0 1rem;
+  list-style: none;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   padding: 1rem;
+  font-weight: bold;
 }
 
-main {
-  padding: 1rem;
+nav a.active {
+  border-bottom: 3px solid var(--accent-color);
 }
-
-footer {
-  background-color: #0077b6;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-/* Global Header Container */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: #0077b6;
-  color: white;
+  padding: 1rem 2rem;
 }
 
-/* Logo */
 #logo {
-  width: 100px;
+  width: auto;
+  max-height: 200px;
   height: auto;
 }
 
-/* Desktop Nav (default hidden for mobile first) */
-#nav-menu {
-  display: none;
-}
-
-/* Hamburger button */
 #hamburger {
   font-size: 2rem;
   background: none;
   color: white;
   border: none;
   cursor: pointer;
+  display: block;
 }
 
-/* Nav links */
+#nav-menu {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: max-height 0.3s ease, visibility 0.3s ease;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
 #nav-menu ul {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
-  display: flex;
-  gap: 1rem;
 }
 
 #nav-menu ul li a {
   color: white;
-  text-decoration: none;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-#nav-menu ul li a.active {
-  border-bottom: 3px solid #ffb703; /* Wayfinding effect */
-}
-
-/* Mobile dropdown activated class */
 #nav-menu.show {
-  display: flex;
-  flex-direction: column; /* 🧩 Stack items vertically */
-  background-color: #0077b6;
-  padding: 1rem;
-  gap: 1rem;
-  margin-top: 1rem;
+  max-height: 300px;
+  visibility: visible;
 }
 
-/* Card styles for study techniques */
+@media (min-width: 700px) {
+  #hamburger {
+    display: none;
+  }
+
+  #nav-menu {
+    max-height: none !important;
+    visibility: visible !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding: 0;
+    gap: 2rem;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
+
 .technique-card {
-  background: #ffffff;
+  width: 100%;
+  max-width: 300px;
+  background: white;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem auto;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   text-align: center;
-  max-width: 300px;
 }
 
 .technique-card img {
-  width: 100%;
-  height: auto;
+  object-fit: cover;
   border-radius: 8px;
 }
 
-.technique-card h3 {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  color: #0077b6;
+#techniques-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-button {
+@media (min-width: 600px) {
+  #techniques-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  #techniques-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+button, .instructions-btn {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  background-color: #0077b6;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #023e8a;
+button:hover, .instructions-btn:hover {
+  background-color: var(--secondary-color);
 }
-.stats-panel {
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+.instructions-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
+
 .stats-panel, .history-panel {
   margin-top: 1rem;
   padding: 1rem;
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -168,224 +211,7 @@ button:hover {
   font-size: 0.9rem;
 }
 
-/* Base: mobile first */
-#techniques-container {
-  display: grid;
-  grid-template-areas:
-    "card1"
-    "card2"
-    "card3"
-    "card4"
-    "card5"
-    "card6";
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.technique-card {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.technique-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Tablet view */
-@media (min-width: 600px) {
-  #techniques-container {
-    grid-template-areas:
-      "card1 card2"
-      "card3 card4"
-      "card5 card6";
-  }
-}
-
-/* Desktop view */
-@media (min-width: 900px) {
-  #techniques-container {
-    grid-template-areas:
-      "card1 card2 card3"
-      "card4 card5 card6";
-  }
-}
-/* Default hidden menu for mobile */
-#nav-menu {
-  display: none;
-  flex-direction: column;
-  background-color: #0077b6;
-  padding: 1rem;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-/* When opened: vertical dropdown */
-#nav-menu.show {
-  display: flex;
-  flex-direction: column;
-  background-color: #0077b6;
-  padding: 1rem;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-/* Desktop mode */
-@media (min-width: 700px) {
-  #nav-menu {
-    display: flex;
-  }
-
-  #hamburger {
-    display: none;
-  }
-}
-
-/* ========== HEADER STYLES ========== */
-
-/* Container for header */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #0077b6;
-  color: white;
-}
-
-/* Logo styling */
-#logo {
-  width: 200px;
-  height: auto;
-}
-
-/* Hamburger button default (mobile-first) */
-#hamburger {
-  font-size: 2rem;
-  background: none;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-/* Hide menu initially */
-#nav-menu {
-  display: none;
-  flex-direction: column;
-  background-color: #0077b6;
-  padding: 1rem;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-/* Show menu when hamburger clicked */
-#nav-menu.show {
-  display: flex;
-}
-
-/* Nav link styling */
-#nav-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#nav-menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* Active link highlight (wayfinding) */
-#nav-menu ul li a.active {
-  border-bottom: 3px solid #ffb703;
-}
-
-/* ========== DESKTOP STYLES ========== */
-@media (min-width: 700px) {
-  #hamburger {
-    display: none;
-  }
-
-  #nav-menu {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: transparent;
-    margin-top: 0;
-    padding: 0;
-    gap: 2rem;
-  }
-}
-/* Style for the instructions button */
-.instructions-btn {
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-.instructions-btn:hover {
-  background-color: #45a049;
-}
-
-.instructions-btn:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-}
-
-/* Style for the instructions text */
-.instructions {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #f8f8f8;
-  border-left: 4px solid #4CAF50;
-  border-radius: 0 4px 4px 0;
-}
 /* Modal styles */
- .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: modalopen 0.3s;
-}
-
-.modal__benefits {
-  background-color: #fefefe;
-  margin-top: 15px;
-  list-style: disc inside;
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-/* Modal general container */
 .modal {
   display: none;
   position: fixed;
@@ -397,7 +223,6 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Modal content box */
 .modal__content {
   background-color: #fefefe;
   margin: 10% auto;
@@ -410,26 +235,21 @@ button:hover {
   animation: modalopen 0.3s;
 }
 
-/* Modal header (title + close button container) */
 .modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Modal title */
 .modal__title {
   font-size: 1.5rem;
   margin: 0;
 }
 
-/* Close button */
 .modal__close {
-  background: none;
-  background-color: #023e8a;
+  background-color: var(--secondary-color);
   border: none;
   font-size: 2rem;
-  line-height: 1;
   cursor: pointer;
   color: #666;
   transition: color 0.3s;
@@ -439,15 +259,12 @@ button:hover {
   color: #000;
 }
 
-/* Benefits list */
 .modal__benefits {
   margin-top: 15px;
   list-style: disc inside;
-  color: #333;
   font-size: 1rem;
-  line-height: 1.5;
+  color: var(--text-color);
 }
-
 
 @keyframes modalopen {
   from {opacity: 0; transform: translateY(-50px);}
@@ -467,19 +284,10 @@ button:hover {
 .close-btn:hover {
   color: #333;
 }
-
-/* Instruction button styles */
-.instructions-btn {
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-.instructions-btn:hover {
-  background-color: #45a049;
+.social-links img {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin: 0 0.5rem;
 }
