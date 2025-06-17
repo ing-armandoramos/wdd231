@@ -24,16 +24,16 @@ function displayApplicationInfo() {
  */
 function generateApplicationHTML(urlParams) {
 	const firstName = urlParams.get('firstName') || 'Not provided'
-	const lastName = urlParams.get('lastName') || 'Not provided'
-	const orgTitle = urlParams.get('orgTitle') || 'Not provided'
+	//const lastName = urlParams.get('lastName') || 'Not provided'
+	//const orgTitle = urlParams.get('orgTitle') || 'Not provided'
 	const email = urlParams.get('email') || 'Not provided'
-	const phone = urlParams.get('phone') || 'Not provided'
-	const businessName = urlParams.get('businessName') || 'Not provided'
-	const membershipLevel = urlParams.get('membershipLevel') || 'Not selected'
-	const businessDescription = urlParams.get('businessDescription') || 'Not provided'
+	//const phone = urlParams.get('phone') || 'Not provided'
+	//const businessName = urlParams.get('businessName') || 'Not provided'
+	//const membershipLevel = urlParams.get('membershipLevel') || 'Not selected'
+	//const businessDescription = urlParams.get('businessDescription') || 'Not provided'
 	const timestamp = urlParams.get('timestamp') || 'Not available'
 	const formattedTimestamp = formatTimestamp(timestamp)
-	const formattedMembershipLevel = formatMembershipLevel(membershipLevel)
+	//const formattedMembershipLevel = formatMembershipLevel(membershipLevel)
 
 	
 	return `
