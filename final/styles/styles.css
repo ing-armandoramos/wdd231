@@ -52,6 +52,9 @@ nav li {
 }
 
 nav a {
+  display:flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   text-decoration: none;
   padding: 1rem;
